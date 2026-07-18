@@ -1,0 +1,36 @@
+{
+  "google": {
+    "enabled": true,
+    "location": "Tokyo, Japan",
+    "queries": [
+      "software engineer",
+      "software development engineer"
+    ],
+    "maxPagesPerQuery": 5
+  },
+  "amazon": {
+    "enabled": true,
+    "countryCode": "JPN",
+    "queries": [
+      "software development engineer",
+      "software engineer",
+      "SDE II"
+    ],
+    "pageSize": 100
+  },
+  "roleFilters": {
+    "include": [
+      "software engineer",
+      "software development engineer",
+      "software dev engineer",
+      "ソフトウェア エンジニア",
+      "ソフトウェアエンジニア"
+    ],
+    "exclude": [
+      "manager",
+      "director",
+      "technical program manager",
+      "product manager"
+    ]
+  }
+}

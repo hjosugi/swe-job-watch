@@ -1,0 +1,65 @@
+{
+  "checkedAt": "2026-07-18T03:11:13.432Z",
+  "jobs": [
+    {
+      "key": "amazon:10464373",
+      "company": "amazon",
+      "companyName": "Amazon Japan G.K.",
+      "title": "Senior Software Dev Engineer, JP Manga",
+      "url": "https://www.amazon.jobs/en/jobs/10464373/senior-software-dev-engineer-jp-manga",
+      "location": "Tokyo, Japan",
+      "postedDate": "July 1, 2026",
+      "levelEstimate": "Amazon L6 / Google L5前後 目安"
+    },
+    {
+      "key": "amazon:10448519",
+      "company": "amazon",
+      "companyName": "Amazon Japan G.K.",
+      "title": "Software Development Engineer, Japan Seller Services Tech",
+      "url": "https://www.amazon.jobs/en/jobs/10448519/software-development-engineer-japan-seller-services-tech",
+      "location": "Tokyo, Japan",
+      "postedDate": "June 15, 2026",
+      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
+    },
+    {
+      "key": "amazon:10463333",
+      "company": "amazon",
+      "companyName": "Amazon Japan G.K.",
+      "title": "Sr. Software Dev Engineer, JCFS JP Robotics",
+      "url": "https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics",
+      "location": "Tokyo, Japan",
+      "postedDate": "July 1, 2026",
+      "levelEstimate": "Amazon L6 / Google L5前後 目安"
+    },
+    {
+      "key": "amazon:10376382",
+      "company": "amazon",
+      "companyName": "Amazon Web Services Japan GK",
+      "title": "Sr. Software Dev Engineer, PostgreSQL Contributors",
+      "url": "https://www.amazon.jobs/en/jobs/10376382/sr-software-dev-engineer-postgresql-contributors",
+      "location": "Virtual, Japan",
+      "postedDate": "March 25, 2026",
+      "levelEstimate": "Amazon L6 / Google L5前後 目安"
+    },
+    {
+      "key": "google:118586037713674950",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Senior Software Engineer, Android CI Infrastructure",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/118586037713674950-senior-software-engineer-android-ci-infrastructure",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "Google L5 目安"
+    },
+    {
+      "key": "google:118761537694245574",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Senior Software Engineer, Search AI/ML",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/118761537694245574-senior-software-engineer-search-aiml",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "Google L5 目安"
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+name: Weekly SWE jobs
+
+on:
+  schedule:
+    # Every Friday at 07:00 JST (Thursday 22:00 UTC).
+    - cron: "0 22 * * 4"
+  workflow_dispatch:
+
+permissions:
+  contents: write
+  pull-requests: write
+
+concurrency:
+  group: weekly-swe-jobs
+  cancel-in-progress: false
+
+jobs:
+  check-jobs:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v7
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v7
+        with:
+          node-version: 22
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Chromium
+        run: npx playwright install --with-deps chromium
+
+      - name: Run tests
+        run: npm test
+
+      - name: Check current jobs
+        run: npm run jobs:check
+
+      - name: Create or update weekly pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        shell: bash
+        run: |
+          report_date="$(TZ=Asia/Tokyo date +%F)"
+          branch="bot/weekly-jobs-${report_date}"
+          title="jobs: weekly update ${report_date}"
+          body="Google Tokyo と Amazon / AWS Japan の週次SWE求人チェックです。
+
+          - JavaScript描画後のGoogle CareersをPlaywrightで確認
+          - Amazon Jobs公式検索データを確認
+          - 直接リンク、新着、掲載終了、レベル目安を更新
+
+          詳細は \`LATEST.md\` と \`reports/${report_date}.md\` を確認してください。"
+
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git switch -c "${branch}"
+          git add LATEST.md data/jobs.json reports/
+
+          if git diff --cached --quiet; then
+            echo "No report changes to publish."
+            exit 0
+          fi
+
+          git commit -m "${title}"
+          git push --force origin "HEAD:refs/heads/${branch}"
+
+          pr_number="$(
+            gh pr list \
+              --head "${branch}" \
+              --state open \
+              --json number \
+              --jq '.[0].number // empty'
+          )"
+
+          if [[ -n "${pr_number}" ]]; then
+            gh pr edit "${pr_number}" --title "${title}" --body "${body}"
+          else
+            gh pr create \
+              --base "${{ github.event.repository.default_branch }}" \
+              --head "${branch}" \
+              --title "${title}" \
+              --body "${body}"
+          fi

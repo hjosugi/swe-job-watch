@@ -1,0 +1,19 @@
+{
+  "name": "swe-job-watch",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Weekly Google Japan and Amazon/AWS Japan SWE job watcher",
+  "type": "module",
+  "engines": {
+    "node": ">=22"
+  },
+  "scripts": {
+    "jobs:check": "node src/check-jobs.js",
+    "jobs:dry-run": "node src/check-jobs.js --dry-run",
+    "lint": "node --check src/check-jobs.js && node --check src/job-checker.js && node --check src/sources/google.js && node --check src/sources/amazon.js",
+    "test": "node --test"
+  },
+  "dependencies": {
+    "playwright": "1.61.1"
+  }
+}

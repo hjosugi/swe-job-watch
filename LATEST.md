@@ -1,0 +1,35 @@
+# 今週のSWE求人（2026-07-18）
+
+対象: Google 東京、および Amazon / AWS 日本。求人タイトルからSWE系職種に絞り込んでいます。
+
+## サマリー
+
+- Google: 2件
+- Amazon / AWS: 4件
+- 新着: 0件
+- 掲載終了: 0件
+
+## Google（東京）
+
+- [Senior Software Engineer, Android CI Infrastructure](https://www.google.com/about/careers/applications/jobs/results/118586037713674950-senior-software-engineer-android-ci-infrastructure)
+  - Google L5 目安 / Tokyo, Japan / Google
+- [Senior Software Engineer, Search AI/ML](https://www.google.com/about/careers/applications/jobs/results/118761537694245574-senior-software-engineer-search-aiml)
+  - Google L5 目安 / Tokyo, Japan / Google
+
+## Amazon / AWS（日本）
+
+- [Senior Software Dev Engineer, JP Manga](https://www.amazon.jobs/en/jobs/10464373/senior-software-dev-engineer-jp-manga)
+  - Amazon L6 / Google L5前後 目安 / Tokyo, Japan / 掲載 July 1, 2026 / Amazon Japan G.K.
+- [Software Development Engineer, Japan Seller Services Tech](https://www.amazon.jobs/en/jobs/10448519/software-development-engineer-japan-seller-services-tech)
+  - Amazon L5候補 / Google L4前後 目安 / Tokyo, Japan / 掲載 June 15, 2026 / Amazon Japan G.K.
+- [Sr. Software Dev Engineer, JCFS JP Robotics](https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics)
+  - Amazon L6 / Google L5前後 目安 / Tokyo, Japan / 掲載 July 1, 2026 / Amazon Japan G.K.
+- [Sr. Software Dev Engineer, PostgreSQL Contributors](https://www.amazon.jobs/en/jobs/10376382/sr-software-dev-engineer-postgresql-contributors)
+  - Amazon L6 / Google L5前後 目安 / Virtual, Japan / 掲載 March 25, 2026 / Amazon Web Services Japan GK
+
+## 取得メモ
+
+- Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク34件、SWE 2件）
+- Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得6件、SWE 4件）
+
+_自動確認: 2026-07-18T03:11:13.432Z_
