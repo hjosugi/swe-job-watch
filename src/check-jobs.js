@@ -46,7 +46,7 @@ async function main() {
 
   await context.route("**/*", async (route) => {
     const resourceType = route.request().resourceType();
-    if (["font", "image", "media"].includes(resourceType)) {
+    if (["font", "image", "media", "stylesheet"].includes(resourceType)) {
       await route.abort();
       return;
     }
@@ -54,15 +54,15 @@ async function main() {
   });
 
   try {
-    const page = await context.newPage();
-    const results = [];
+    const fetches = [];
 
     if (config.google.enabled) {
-      results.push(await fetchGoogleJobs(page, config));
+      fetches.push(fetchGoogleJobs(context, config));
     }
     if (config.amazon.enabled) {
-      results.push(await fetchAmazonJobs(context.request, config));
+      fetches.push(fetchAmazonJobs(context.request, config));
     }
+    const results = await Promise.all(fetches);
 
     const jobs = sortJobs(results.flatMap((result) => result.jobs));
     const checkedAt = new Date().toISOString();

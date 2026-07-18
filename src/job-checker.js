@@ -12,15 +12,25 @@ export function canonicalUrl(rawUrl) {
   return url.toString();
 }
 
+export function createRoleMatcher(roleFilters) {
+  const includeTerms = roleFilters.include.map((term) =>
+    normalizeSpace(term).toLocaleLowerCase("en-US"),
+  );
+  const excludeTerms = roleFilters.exclude.map((term) =>
+    normalizeSpace(term).toLocaleLowerCase("en-US"),
+  );
+
+  return (title) => {
+    const normalized = normalizeSpace(title).toLocaleLowerCase("en-US");
+    return (
+      includeTerms.some((term) => normalized.includes(term)) &&
+      !excludeTerms.some((term) => normalized.includes(term))
+    );
+  };
+}
+
 export function isTargetRole(title, roleFilters) {
-  const normalized = normalizeSpace(title).toLocaleLowerCase("en-US");
-  const includes = roleFilters.include.some((term) =>
-    normalized.includes(term.toLocaleLowerCase("en-US")),
-  );
-  const excludes = roleFilters.exclude.some((term) =>
-    normalized.includes(term.toLocaleLowerCase("en-US")),
-  );
-  return includes && !excludes;
+  return createRoleMatcher(roleFilters)(title);
 }
 
 export function estimateLevel(company, title) {

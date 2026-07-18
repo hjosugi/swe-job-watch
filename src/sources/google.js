@@ -1,7 +1,7 @@
 import {
   canonicalUrl,
+  createRoleMatcher,
   estimateLevel,
-  isTargetRole,
   normalizeSpace,
 } from "../job-checker.js";
 
@@ -17,7 +17,7 @@ function titleFromAnchor(anchor) {
   return normalizeSpace(anchor.text || "");
 }
 
-async function extractPageJobs(page, config, searchUrl) {
+async function extractPageJobs(page, config, searchUrl, matchesRole) {
   await page.goto(searchUrl, {
     waitUntil: "domcontentloaded",
     timeout: 60_000,
@@ -47,7 +47,7 @@ async function extractPageJobs(page, config, searchUrl) {
       continue;
     }
     pageJobKeys.add(`google:${match[1]}`);
-    if (!title || !isTargetRole(title, config.roleFilters)) {
+    if (!title || !matchesRole(title)) {
       continue;
     }
 
@@ -70,17 +70,25 @@ async function extractPageJobs(page, config, searchUrl) {
   };
 }
 
-export async function fetchGoogleJobs(page, config) {
-  const jobs = new Map();
+async function fetchGoogleQuery(
+  context,
+  config,
+  query,
+  matchesRole,
+) {
+  const page = await context.newPage();
+  const jobs = [];
   let renderedAnchorCount = 0;
   let pagesVisited = 0;
 
-  for (const query of config.google.queries) {
+  try {
     let previousPageSignature = "";
 
-    for (let pageNumber = 1;
+    for (
+      let pageNumber = 1;
       pageNumber <= config.google.maxPagesPerQuery;
-      pageNumber += 1) {
+      pageNumber += 1
+    ) {
       const url = new URL("jobs/results/", GOOGLE_ORIGIN);
       url.searchParams.set("location", config.google.location);
       url.searchParams.set("q", query);
@@ -88,12 +96,15 @@ export async function fetchGoogleJobs(page, config) {
         url.searchParams.set("page", String(pageNumber));
       }
 
-      const result = await extractPageJobs(page, config, url.toString());
+      const result = await extractPageJobs(
+        page,
+        config,
+        url.toString(),
+        matchesRole,
+      );
       renderedAnchorCount += result.anchorCount;
       pagesVisited += 1;
-      for (const job of result.jobs) {
-        jobs.set(job.key, job);
-      }
+      jobs.push(...result.jobs);
 
       if (
         result.anchorCount === 0 ||
@@ -102,6 +113,30 @@ export async function fetchGoogleJobs(page, config) {
         break;
       }
       previousPageSignature = result.pageSignature;
+    }
+  } finally {
+    await page.close();
+  }
+
+  return { jobs, pagesVisited, renderedAnchorCount };
+}
+
+export async function fetchGoogleJobs(context, config) {
+  const matchesRole = createRoleMatcher(config.roleFilters);
+  const queryResults = await Promise.all(
+    config.google.queries.map((query) =>
+      fetchGoogleQuery(context, config, query, matchesRole),
+    ),
+  );
+  const jobs = new Map();
+  let renderedAnchorCount = 0;
+  let pagesVisited = 0;
+
+  for (const result of queryResults) {
+    renderedAnchorCount += result.renderedAnchorCount;
+    pagesVisited += result.pagesVisited;
+    for (const job of result.jobs) {
+      jobs.set(job.key, job);
     }
   }
 

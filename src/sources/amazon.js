@@ -1,7 +1,7 @@
 import {
   canonicalUrl,
+  createRoleMatcher,
   estimateLevel,
-  isTargetRole,
   normalizeSpace,
 } from "../job-checker.js";
 
@@ -18,73 +18,93 @@ function amazonJobId(job) {
   );
 }
 
-export async function fetchAmazonJobs(request, config) {
+async function fetchAmazonQuery(request, config, query, matchesRole) {
   const jobs = new Map();
   let apiRows = 0;
   let requests = 0;
 
-  for (const query of config.amazon.queries) {
-    for (let offset = 0; ; offset += config.amazon.pageSize) {
-      const url = new URL(AMAZON_API);
-      url.searchParams.set("base_query", query);
-      url.searchParams.append(
-        "normalized_country_code[]",
-        config.amazon.countryCode,
+  for (let offset = 0; ; offset += config.amazon.pageSize) {
+    const url = new URL(AMAZON_API);
+    url.searchParams.set("base_query", query);
+    url.searchParams.append(
+      "normalized_country_code[]",
+      config.amazon.countryCode,
+    );
+    url.searchParams.set("result_limit", String(config.amazon.pageSize));
+    url.searchParams.set("offset", String(offset));
+
+    const response = await request.get(url.toString(), {
+      timeout: 60_000,
+    });
+    requests += 1;
+    if (!response.ok()) {
+      throw new Error(
+        `Amazon Jobs APIがHTTP ${response.status()}を返しました。`,
       );
-      url.searchParams.set("result_limit", String(config.amazon.pageSize));
-      url.searchParams.set("offset", String(offset));
+    }
 
-      const response = await request.get(url.toString(), {
-        timeout: 60_000,
+    const data = await response.json();
+    if (!Array.isArray(data.jobs)) {
+      throw new Error("Amazon Jobs APIのレスポンス形式が変わりました。");
+    }
+
+    apiRows += data.jobs.length;
+    for (const source of data.jobs) {
+      const title = normalizeSpace(source.title || "");
+      const id = amazonJobId(source);
+      const countryCode = source.country_code || "";
+      if (
+        !id ||
+        !title ||
+        !["JPN", "JP"].includes(countryCode) ||
+        !matchesRole(title)
+      ) {
+        continue;
+      }
+
+      const rawUrl = source.job_path
+        ? new URL(source.job_path, "https://www.amazon.jobs").toString()
+        : `https://www.amazon.jobs/en/jobs/${id}`;
+      jobs.set(`amazon:${id}`, {
+        key: `amazon:${id}`,
+        company: "amazon",
+        companyName: normalizeSpace(
+          source.company_name || "Amazon / AWS",
+        ),
+        title,
+        url: canonicalUrl(rawUrl),
+        location: normalizeSpace(
+          [source.city, "Japan"].filter(Boolean).join(", "),
+        ),
+        postedDate: normalizeSpace(source.posted_date || ""),
+        levelEstimate: estimateLevel("amazon", title),
       });
-      requests += 1;
-      if (!response.ok()) {
-        throw new Error(
-          `Amazon Jobs APIがHTTP ${response.status()}を返しました。`,
-        );
-      }
+    }
 
-      const data = await response.json();
-      if (!Array.isArray(data.jobs)) {
-        throw new Error("Amazon Jobs APIのレスポンス形式が変わりました。");
-      }
+    if (data.jobs.length < config.amazon.pageSize) {
+      break;
+    }
+  }
 
-      apiRows += data.jobs.length;
-      for (const source of data.jobs) {
-        const title = normalizeSpace(source.title || "");
-        const id = amazonJobId(source);
-        const countryCode = source.country_code || "";
-        if (
-          !id ||
-          !title ||
-          !["JPN", "JP"].includes(countryCode) ||
-          !isTargetRole(title, config.roleFilters)
-        ) {
-          continue;
-        }
+  return { apiRows, jobs: [...jobs.values()], requests };
+}
 
-        const rawUrl = source.job_path
-          ? new URL(source.job_path, "https://www.amazon.jobs").toString()
-          : `https://www.amazon.jobs/en/jobs/${id}`;
-        jobs.set(`amazon:${id}`, {
-          key: `amazon:${id}`,
-          company: "amazon",
-          companyName: normalizeSpace(
-            source.company_name || "Amazon / AWS",
-          ),
-          title,
-          url: canonicalUrl(rawUrl),
-          location: normalizeSpace(
-            [source.city, "Japan"].filter(Boolean).join(", "),
-          ),
-          postedDate: normalizeSpace(source.posted_date || ""),
-          levelEstimate: estimateLevel("amazon", title),
-        });
-      }
+export async function fetchAmazonJobs(request, config) {
+  const matchesRole = createRoleMatcher(config.roleFilters);
+  const queryResults = await Promise.all(
+    config.amazon.queries.map((query) =>
+      fetchAmazonQuery(request, config, query, matchesRole),
+    ),
+  );
+  const jobs = new Map();
+  let apiRows = 0;
+  let requests = 0;
 
-      if (data.jobs.length < config.amazon.pageSize) {
-        break;
-      }
+  for (const result of queryResults) {
+    apiRows += result.apiRows;
+    requests += result.requests;
+    for (const job of result.jobs) {
+      jobs.set(job.key, job);
     }
   }
 
