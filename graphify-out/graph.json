@@ -264,7 +264,7 @@
       "_origin": "ast",
       "id": "src_job_checker_normalizespace",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "normalizespace()"
     },
     {
@@ -274,8 +274,8 @@
       "source_location": "L8",
       "_origin": "ast",
       "id": "src_job_checker_canonicalurl",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "canonicalurl()"
     },
     {
@@ -285,8 +285,8 @@
       "source_location": "L15",
       "_origin": "ast",
       "id": "src_job_checker_createrolematcher",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "createrolematcher()"
     },
     {
@@ -307,8 +307,8 @@
       "source_location": "L36",
       "_origin": "ast",
       "id": "src_job_checker_estimatelevel",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "estimatelevel()"
     },
     {
@@ -330,7 +330,7 @@
       "_origin": "ast",
       "id": "src_job_checker_textfromhtml",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "textfromhtml()"
     },
     {
@@ -341,7 +341,7 @@
       "_origin": "ast",
       "id": "src_job_checker_classifyeventcontact",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "classifyeventcontact()"
     },
     {
@@ -483,8 +483,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_sources_amazon",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "amazon.js"
     },
     {
@@ -494,8 +494,8 @@
       "source_location": "L10",
       "_origin": "ast",
       "id": "src_sources_amazon_amazonjobid",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "amazonjobid()"
     },
     {
@@ -505,8 +505,8 @@
       "source_location": "L21",
       "_origin": "ast",
       "id": "src_sources_amazon_fetchamazonquery",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "fetchamazonquery()"
     },
     {
@@ -516,8 +516,8 @@
       "source_location": "L92",
       "_origin": "ast",
       "id": "src_sources_amazon_fetchamazonjobs",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "fetchamazonjobs()"
     },
     {
@@ -528,7 +528,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "gdg-events.js"
     },
     {
@@ -539,7 +539,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_gdgurl",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "gdgurl()"
     },
     {
@@ -550,7 +550,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_formatlocation",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "formatlocation()"
     },
     {
@@ -561,7 +561,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_eventformat",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "eventformat()"
     },
     {
@@ -572,7 +572,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_eventfrombevydata",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "eventfrombevydata()"
     },
     {
@@ -583,7 +583,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_fetchchaptereventurls",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "fetchchaptereventurls()"
     },
     {
@@ -594,7 +594,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_fetcheventdata",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "fetcheventdata()"
     },
     {
@@ -605,7 +605,7 @@
       "_origin": "ast",
       "id": "src_sources_gdg_events_fetchgdgevents",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "fetchgdgevents()"
     },
     {
@@ -616,95 +616,117 @@
       "_origin": "ast",
       "id": "src_sources_google_cloud_events",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "google-cloud-events.js"
     },
     {
       "label": "jstDate()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L13",
+      "source_location": "L15",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_jstdate",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "jstdate()"
     },
     {
       "label": "inferYear()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L30",
+      "source_location": "L32",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_inferyear",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "inferyear()"
     },
     {
       "label": "parseJapaneseDateRange()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L37",
+      "source_location": "L39",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_parsejapanesedaterange",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "parsejapanesedaterange()"
     },
     {
       "label": "detailedDateRange()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L96",
+      "source_location": "L98",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_detaileddaterange",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "detaileddaterange()"
     },
     {
       "label": "eventFormat()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L127",
+      "source_location": "L129",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_eventformat",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "eventformat()"
     },
     {
       "label": "eventLocation()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L137",
+      "source_location": "L139",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_eventlocation",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "eventlocation()"
+    },
+    {
+      "label": "filterOption()",
+      "file_type": "code",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L156",
+      "_origin": "ast",
+      "id": "src_sources_google_cloud_events_filteroption",
+      "community": 0,
+      "community_name": "google-cloud-events.js",
+      "norm_label": "filteroption()"
+    },
+    {
+      "label": "verifyExplicitFilter()",
+      "file_type": "code",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L162",
+      "_origin": "ast",
+      "id": "src_sources_google_cloud_events_verifyexplicitfilter",
+      "community": 0,
+      "community_name": "google-cloud-events.js",
+      "norm_label": "verifyexplicitfilter()"
     },
     {
       "label": "eventFromGoogleCloudCard()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L154",
+      "source_location": "L180",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_eventfromgooglecloudcard",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "eventfromgooglecloudcard()"
     },
     {
       "label": "fetchGoogleCloudEvents()",
       "file_type": "code",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L229",
+      "source_location": "L255",
       "_origin": "ast",
       "id": "src_sources_google_cloud_events_fetchgooglecloudevents",
-      "community": 4,
-      "community_name": "job-checker.js",
+      "community": 0,
+      "community_name": "google-cloud-events.js",
       "norm_label": "fetchgooglecloudevents()"
     },
     {
@@ -714,8 +736,8 @@
       "source_location": "L1",
       "_origin": "ast",
       "id": "src_sources_google",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "google.js"
     },
     {
@@ -725,8 +747,8 @@
       "source_location": "L12",
       "_origin": "ast",
       "id": "src_sources_google_titlefromanchor",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "titlefromanchor()"
     },
     {
@@ -736,8 +758,8 @@
       "source_location": "L20",
       "_origin": "ast",
       "id": "src_sources_google_extractpagejobs",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "extractpagejobs()"
     },
     {
@@ -747,8 +769,8 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "src_sources_google_fetchgooglequery",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "fetchgooglequery()"
     },
     {
@@ -758,8 +780,8 @@
       "source_location": "L124",
       "_origin": "ast",
       "id": "src_sources_google_fetchgooglejobs",
-      "community": 0,
-      "community_name": "normalizeSpace",
+      "community": 37,
+      "community_name": "google.js",
       "norm_label": "fetchgooglejobs()"
     },
     {
@@ -792,7 +814,7 @@
       "_origin": "ast",
       "id": "test_source_fetch_test",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "source-fetch.test.js"
     },
     {
@@ -803,7 +825,7 @@
       "_origin": "ast",
       "id": "test_source_fetch_test_rolefilters",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "rolefilters"
     },
     {
@@ -814,7 +836,7 @@
       "_origin": "ast",
       "id": "test_source_fetch_test_newpage",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "newpage()"
     },
     {
@@ -825,7 +847,7 @@
       "_origin": "ast",
       "id": "test_source_fetch_test_get",
       "community": 0,
-      "community_name": "normalizeSpace",
+      "community_name": "google-cloud-events.js",
       "norm_label": "get()"
     },
     {
@@ -4193,7 +4215,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L159",
+      "source_location": "L185",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -4204,7 +4226,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L142",
+      "source_location": "L144",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventlocation",
@@ -4217,7 +4239,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L38",
+      "source_location": "L40",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_parsejapanesedaterange",
@@ -4313,7 +4335,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L199",
+      "source_location": "L225",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -4577,7 +4599,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L201",
+      "source_location": "L227",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -4685,7 +4707,7 @@
       "confidence": "EXTRACTED",
       "confidence_score": 1.0,
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L269",
+      "source_location": "L300",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_fetchgooglecloudevents",
@@ -5069,7 +5091,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L96",
+      "source_location": "L98",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5080,7 +5102,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L127",
+      "source_location": "L129",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5091,7 +5113,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L154",
+      "source_location": "L180",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5102,7 +5124,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L137",
+      "source_location": "L139",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5113,7 +5135,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L229",
+      "source_location": "L255",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5124,7 +5146,18 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L30",
+      "source_location": "L156",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_sources_google_cloud_events",
+      "target": "src_sources_google_cloud_events_filteroption",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L32",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5135,7 +5168,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L13",
+      "source_location": "L15",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
@@ -5146,11 +5179,22 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L37",
+      "source_location": "L39",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events",
       "target": "src_sources_google_cloud_events_parsejapanesedaterange",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L162",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_sources_google_cloud_events",
+      "target": "src_sources_google_cloud_events_verifyexplicitfilter",
       "confidence_score": 1.0
     },
     {
@@ -5170,7 +5214,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L102",
+      "source_location": "L104",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_detaileddaterange",
@@ -5182,7 +5226,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L33",
+      "source_location": "L35",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_inferyear",
@@ -5194,7 +5238,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L48",
+      "source_location": "L50",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_parsejapanesedaterange",
@@ -5206,7 +5250,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L74",
+      "source_location": "L76",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_parsejapanesedaterange",
@@ -5218,7 +5262,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L188",
+      "source_location": "L214",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -5242,7 +5286,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L187",
+      "source_location": "L213",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -5254,7 +5298,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L171",
+      "source_location": "L197",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -5266,7 +5310,7 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L200",
+      "source_location": "L226",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_eventfromgooglecloudcard",
@@ -5278,7 +5322,31 @@
       "context": "call",
       "confidence": "EXTRACTED",
       "source_file": "src/sources/google-cloud-events.js",
-      "source_location": "L265",
+      "source_location": "L169",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_sources_google_cloud_events_verifyexplicitfilter",
+      "target": "src_sources_google_cloud_events_filteroption",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L267",
+      "weight": 1.0,
+      "_origin": "ast",
+      "source": "src_sources_google_cloud_events_fetchgooglecloudevents",
+      "target": "src_sources_google_cloud_events_verifyexplicitfilter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/sources/google-cloud-events.js",
+      "source_location": "L296",
       "weight": 1.0,
       "_origin": "ast",
       "source": "src_sources_google_cloud_events_fetchgooglecloudevents",
@@ -5439,7 +5507,7 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "test/source-fetch.test.js",
-      "source_location": "L283",
+      "source_location": "L290",
       "weight": 1.0,
       "_origin": "ast",
       "source": "test_source_fetch_test",
@@ -7461,5 +7529,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "d06c90b0727cfc9adcb676f4af4d270313204364"
+  "built_at_commit": "6795fc02f3cac2c7954d395df1d212c33deeb1f6"
 }

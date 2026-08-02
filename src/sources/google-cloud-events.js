@@ -7,6 +7,8 @@ import {
 
 const EVENT_CARD_SELECTOR =
   'a[track-type="card"][track-metadata-eventdetail]';
+const FILTER_OPTION_SELECTOR =
+  'li[role="option"][track-type="checkbox"]';
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -151,6 +153,30 @@ function eventLocation(body, locationTerms) {
     : "日本（会場は公式ページ参照）";
 }
 
+function filterOption(page, filterName) {
+  return page
+    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
+    .first();
+}
+
+async function verifyExplicitFilter(page, filterName, filterOptions) {
+  if (!new URL(page.url()).searchParams.get("ser")) {
+    throw new Error(
+      `Google Cloudイベントの${filterName}フィルタURLがありません。`,
+    );
+  }
+  for (const optionName of filterOptions) {
+    const confirmed = filterOption(page, optionName);
+    await confirmed.waitFor({ state: "attached", timeout: 20_000 });
+    const expected = optionName === filterName ? "true" : "false";
+    if ((await confirmed.getAttribute("aria-selected")) !== expected) {
+      throw new Error(
+        `Google Cloudイベントの${filterName}フィルタを排他的に固定できません。`,
+      );
+    }
+  }
+}
+
 export function eventFromGoogleCloudCard(
   card,
   { lookaheadDays = 120, locationTerms = [] } = {},
@@ -238,6 +264,11 @@ export async function fetchGoogleCloudEvents(
       waitUntil: "domcontentloaded",
       timeout: 60_000,
     });
+    await verifyExplicitFilter(
+      page,
+      settings.regionFilter,
+      settings.regionOptions,
+    );
     const cards = page.locator(EVENT_CARD_SELECTOR);
     await cards.first().waitFor({ state: "attached", timeout: 20_000 });
     const sources = await cards.evaluateAll((elements) =>
@@ -268,7 +299,8 @@ export async function fetchGoogleCloudEvents(
     return {
       events: sortEvents(events),
       diagnostic:
-        `Google Cloudイベント: 公式一覧${sources.length}件を確認` +
+        `Google Cloudイベント: ${settings.regionFilter}フィルタで` +
+        `公式一覧${sources.length}件を確認` +
         `（日本の現地・ハイブリッド対象${events.length}件）`,
     };
   } finally {

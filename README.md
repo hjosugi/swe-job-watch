@@ -12,7 +12,7 @@ Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人、およ
 - SWE系タイトルだけを残し、Google L4前後の簡易レベル目安を表示
 - 前回の `data/jobs.json` と比較して新着・掲載終了を表示
 - GDG Tokyo・GDG on Campus IPUT Tokyoの公式ページから今後120日以内のイベントを確認
-- Google Cloud公式イベント一覧から日本の現地・ハイブリッド開催を確認
+- Google Cloud公式イベント一覧で日本フィルタを明示し、現地・ハイブリッド開催を確認
 - Googler明記、Google会場、交流時間、双方向形式などを根拠に「接点期待度」を表示
 - `LATEST.md` と日付別の `reports/YYYY-MM-DD.md` を生成
 - 毎週金曜07:00 JSTにGitHub Actionsを実行し、週次PRを作成

@@ -10,32 +10,32 @@
     "semantic_hash": ""
   },
   "data/events.json": {
-    "mtime": 1785651033.4113379,
-    "ast_hash": "99cbeed41aa1863c50ec970bb4ce685b",
+    "mtime": 1785651652.0740983,
+    "ast_hash": "7ae66cfc3bd1943a496ccc1bc9f72059",
     "semantic_hash": ""
   },
   "data/jobs.json": {
-    "mtime": 1785651033.4113379,
-    "ast_hash": "32615617f10c9d583c5c5740485c925a",
+    "mtime": 1785651652.0740983,
+    "ast_hash": "34fcd65251d0279e16b15a12f5aca624",
     "semantic_hash": ""
   },
   "job-search.config.json": {
-    "mtime": 1785650893.5169175,
-    "ast_hash": "990868494ba8496259970e1369d0b883",
+    "mtime": 1785652525.0927598,
+    "ast_hash": "e782341ef77fde872dc8fc36ce0ce481",
     "semantic_hash": ""
   },
   "package.json": {
-    "mtime": 1785650893.7239196,
+    "mtime": 1785651341.3548102,
     "ast_hash": "c862a3036dca9103a12283c10061c6ae",
     "semantic_hash": ""
   },
   "src/check-jobs.js": {
-    "mtime": 1785650893.3149154,
+    "mtime": 1785651341.3548102,
     "ast_hash": "5dd6a60b56502e57e461303b699fcd97",
     "semantic_hash": ""
   },
   "src/job-checker.js": {
-    "mtime": 1785650893.1149135,
+    "mtime": 1785651341.3558104,
     "ast_hash": "fb745037004dad13d773c9b679118833",
     "semantic_hash": ""
   },
@@ -60,8 +60,8 @@
     "semantic_hash": ""
   },
   "test/source-fetch.test.js": {
-    "mtime": 1785651095.9059722,
-    "ast_hash": "8dceea404c3e3bb89fbda3c89c1f47f7",
+    "mtime": 1785652525.3147619,
+    "ast_hash": "6587089e96874d40e58de19e87f1e508",
     "semantic_hash": ""
   },
   ".claude/CLAUDE.md": {
@@ -215,7 +215,7 @@
     "semantic_hash": ""
   },
   ".github/workflows/weekly-jobs.yml": {
-    "mtime": 1785650894.3349257,
+    "mtime": 1785651341.3428102,
     "ast_hash": "f61ccffbb095a95709b411594c6687af",
     "semantic_hash": ""
   },
@@ -230,13 +230,13 @@
     "semantic_hash": ""
   },
   "LATEST.md": {
-    "mtime": 1785651033.4113379,
-    "ast_hash": "a3da31f434947c867066fd955fc70a4b",
+    "mtime": 1785651652.0740983,
+    "ast_hash": "92e32bcd8c40dddf73bb76a2658b9906",
     "semantic_hash": ""
   },
   "README.md": {
-    "mtime": 1785650894.1229236,
-    "ast_hash": "5a4502cd41f39cb628796e943885fcd8",
+    "mtime": 1785651609.2587605,
+    "ast_hash": "8072d65091a60c76aaf8013820ef2d80",
     "semantic_hash": ""
   },
   "reports/2026-07-18.md": {
@@ -245,12 +245,12 @@
     "semantic_hash": ""
   },
   "reports/2026-08-02.md": {
-    "mtime": 1785651033.4113379,
-    "ast_hash": "a3da31f434947c867066fd955fc70a4b",
+    "mtime": 1785651652.0740983,
+    "ast_hash": "92e32bcd8c40dddf73bb76a2658b9906",
     "semantic_hash": ""
   },
   "data/report-baseline.json": {
-    "mtime": 1785651033.4113379,
+    "mtime": 1785651652.0740983,
     "ast_hash": "828b81b824e6f59a29048c9f91291dbe",
     "semantic_hash": ""
   },
@@ -260,8 +260,8 @@
     "semantic_hash": ""
   },
   "src/sources/google-cloud-events.js": {
-    "mtime": 1785651095.7089703,
-    "ast_hash": "55f70dd8bfcddbc11cc73574403bdc4a",
+    "mtime": 1785652524.8457575,
+    "ast_hash": "d13bdf8a87572320e769194626b26b17",
     "semantic_hash": ""
   }
 }

@@ -279,14 +279,40 @@ test("Google Cloudの日付表示を年またぎも含めて解釈する", () =>
 
 test("Google Cloud一覧はオンデマンドを除外してページを閉じる", async () => {
   let closed = false;
+  const regionSelections = new Map([
+    ["AMER", false],
+    ["EMEA", false],
+    ["APAC", false],
+    ["日本", true],
+  ]);
+  let currentUrl = "";
   const context = {
     async newPage() {
       return {
         async close() {
           closed = true;
         },
-        async goto() {},
-        locator() {
+        async goto(url) {
+          currentUrl = url;
+        },
+        url() {
+          return currentUrl;
+        },
+        locator(selector, options = {}) {
+          if (selector.includes('li[role="option"]')) {
+            const filterName = options.hasText;
+            return {
+              first() {
+                return {
+                  async waitFor() {},
+                  async getAttribute(name) {
+                    assert.equal(name, "aria-selected");
+                    return String(regionSelections.get(filterName));
+                  },
+                };
+              },
+            };
+          }
           return {
             first() {
               return { async waitFor() {} };
@@ -322,7 +348,9 @@ test("Google Cloud一覧はオンデマンドを除外してページを閉じ�
       events: {
         googleCloud: {
           enabled: true,
-          url: "https://cloud.google.com/events?hl=ja",
+          url: "https://cloud.google.com/events?hl=ja&ser=japan",
+          regionFilter: "日本",
+          regionOptions: ["AMER", "EMEA", "APAC", "日本"],
           lookaheadDays: 120,
           locationTerms: ["Tokyo"],
         },
@@ -332,6 +360,8 @@ test("Google Cloud一覧はオンデマンドを除外してページを閉じ�
   );
 
   assert.equal(closed, true);
+  assert.equal(regionSelections.get("APAC"), false);
+  assert.equal(regionSelections.get("日本"), true);
   assert.equal(result.events.length, 1);
-  assert.match(result.diagnostic, /公式一覧2件/);
+  assert.match(result.diagnostic, /日本フィルタで公式一覧2件/);
 });
