@@ -6,8 +6,8 @@
 
 - Google: 2件
 - Amazon / AWS: 4件
-- 新着: 1件
-- 掲載終了: 1件
+- 新着: 0件
+- 掲載終了: 0件
 
 ## Google（東京）
 
@@ -20,20 +20,16 @@
 
 - [Senior Software Dev Engineer, JP Manga](https://www.amazon.jobs/en/jobs/10464373/senior-software-dev-engineer-jp-manga)
   - Amazon L6 / Google L5前後 目安 / Tokyo, Japan / 掲載 July 1, 2026 / Amazon Japan G.K.
-- [Software Dev Engineer, Core Search NLP Document Enhancement](https://www.amazon.jobs/en/jobs/10486162/software-dev-engineer-core-search-nlp-document-enhancement) 🆕
+- [Software Dev Engineer, Core Search NLP Document Enhancement](https://www.amazon.jobs/en/jobs/10486162/software-dev-engineer-core-search-nlp-document-enhancement)
   - Amazon L5候補 / Google L4前後 目安 / Tokyo, Japan / 掲載 July 28, 2026 / Amazon Japan G.K.
 - [Software Development Engineer, Japan Seller Services Tech](https://www.amazon.jobs/en/jobs/10448519/software-development-engineer-japan-seller-services-tech)
   - Amazon L5候補 / Google L4前後 目安 / Tokyo, Japan / 掲載 June 15, 2026 / Amazon Japan G.K.
 - [Sr. Software Dev Engineer, PostgreSQL Contributors](https://www.amazon.jobs/en/jobs/10376382/sr-software-dev-engineer-postgresql-contributors)
   - Amazon L6 / Google L5前後 目安 / Virtual, Japan / 掲載 March 25, 2026 / Amazon Web Services Japan GK
 
-## 前回から掲載終了
-
-- [Sr. Software Dev Engineer, JCFS JP Robotics](https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics)
-
 ## 取得メモ
 
 - Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク38件、SWE 2件）
 - Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得8件、SWE 4件）
 
-_自動確認: 2026-08-02T01:50:25.068Z_
+_自動確認: 2026-08-02T04:11:23.664Z_
