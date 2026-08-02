@@ -1,6 +1,6 @@
-# 今週のSWE求人（2026-08-02）
+# 今週のSWE求人・接点イベント（2026-08-02）
 
-対象: Google 東京、および Amazon / AWS 日本。求人タイトルからSWE系職種に絞り込んでいます。
+対象: Google 東京、Amazon / AWS 日本のSWE求人と、Googler・Google技術コミュニティとの接点が期待できる公開イベント。
 
 ## サマリー
 
@@ -8,6 +8,7 @@
 - Amazon / AWS: 4件
 - 新着: 1件
 - 掲載終了: 1件
+- 接点イベント: 0件（新着 0件）
 
 ## Google（東京）
 
@@ -31,9 +32,16 @@
 
 - [Sr. Software Dev Engineer, JCFS JP Robotics](https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics)
 
+## Googler・Google技術コミュニティと会えるイベント
+
+- 現在、条件に合う開催予定はありません
+
+> 接点期待度は公開ページにある登壇者属性、会場、交流時間、開催形式から判定した目安です。参加や社員紹介を保証するものではありません。
+
 ## 取得メモ
 
-- Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク38件、SWE 2件）
+- Google: ChromiumでJavaScript描画後のDOMを5ページ確認（求人リンク35件、SWE 2件）
 - Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得8件、SWE 4件）
+- GDGイベント: 1チャプターを確認（開催予定0件、対象期間0件）
 
-_自動確認: 2026-08-02T01:50:25.068Z_
+_自動確認: 2026-08-02T05:17:28.331Z_

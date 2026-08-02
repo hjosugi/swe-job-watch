@@ -3,3 +3,5 @@ playwright-report/
 test-results/
 .DS_Store
 *.log
+graphify-out/[0-9][0-9][0-9][0-9]-*/
+graphify-out/cache/

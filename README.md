@@ -1,6 +1,9 @@
 # SWE Job Watch
 
-Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人を毎週確認し、直接リンク付きのレポートをPull Requestにするprivate運用向けツールです。
+[![CI](https://github.com/hjosugi/swe-job-watch/actions/workflows/ci.yml/badge.svg)](https://github.com/hjosugi/swe-job-watch/actions/workflows/ci.yml)
+[![Weekly SWE jobs](https://github.com/hjosugi/swe-job-watch/actions/workflows/weekly-jobs.yml/badge.svg)](https://github.com/hjosugi/swe-job-watch/actions/workflows/weekly-jobs.yml)
+
+Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人、およびGoogler・Google技術コミュニティとの接点が期待できる公開イベントを毎週確認し、直接リンク付きのレポートをPull Requestにするツールです。
 
 ## 何をするか
 
@@ -8,6 +11,8 @@ Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人を毎週
 - Amazon / AWS: PlaywrightのブラウザーコンテキストからAmazon Jobs公式検索APIを取得
 - SWE系タイトルだけを残し、Google L4前後の簡易レベル目安を表示
 - 前回の `data/jobs.json` と比較して新着・掲載終了を表示
+- GDG Tokyoの公式ページから今後120日以内のイベントを確認
+- Googler明記、Google会場、交流時間、双方向形式などを根拠に「接点期待度」を表示
 - `LATEST.md` と日付別の `reports/YYYY-MM-DD.md` を生成
 - 毎週金曜07:00 JSTにGitHub Actionsを実行し、週次PRを作成
 
@@ -38,6 +43,8 @@ node src/check-jobs.js --dry-run --headed
 
 ## GitHub Actions
 
+[`ci.yml`](./.github/workflows/ci.yml) はmainへのpushとPull Requestでlintとテストを実行します。
+
 [`weekly-jobs.yml`](./.github/workflows/weekly-jobs.yml) は以下で起動します。
 
 - 定期: 毎週金曜07:00 JST（GitHubのcron指定は木曜22:00 UTC）
@@ -55,6 +62,10 @@ node src/check-jobs.js --dry-run --headed
 
 - [`LATEST.md`](./LATEST.md): 最新レポート
 - [`data/jobs.json`](./data/jobs.json): 前回比較用の最新スナップショット
+- [`data/events.json`](./data/events.json): 開催予定イベントの最新スナップショット
+- [`data/report-baseline.json`](./data/report-baseline.json): 同日再実行でも差分を保持する日次基準
 - `reports/YYYY-MM-DD.md`: 日付別レポート
 
-求人サイト側のDOMやAPIが変わった場合はワークフローを失敗させ、空の一覧でスナップショットを上書きしない設計です。レベル表記は求人タイトルからの目安であり、正式な採用レベルや報酬を保証するものではありません。
+求人・イベントサイト側のDOMやAPIが変わった場合はワークフローを失敗させ、壊れたスナップショットを公開しない設計です。レベル表記は求人タイトルからの目安であり、正式な採用レベルや報酬を保証するものではありません。
+
+イベントの「接点期待度」は公開ページにある登壇者属性、会場、交流時間、開催形式から判定します。GDGは独立したコミュニティであり、Google社そのものではありません。イベント参加や社員紹介を保証せず、参加者名簿などの個人情報も収集しません。情報源は[GDG Tokyo公式ページ](https://gdg.community.dev/gdg-tokyo/)と[Google Developer Groupsの説明](https://developers.google.com/community/gdg/)です。

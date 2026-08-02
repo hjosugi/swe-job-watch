@@ -53,6 +53,7 @@ jobs:
 
           - JavaScript描画後のGoogle CareersをPlaywrightで確認
           - Amazon Jobs公式検索データを確認
+          - GDG Tokyoの今後の公開イベントと接点の根拠を確認
           - 直接リンク、新着、掲載終了、レベル目安を更新
 
           詳細は \`LATEST.md\` と \`reports/${report_date}.md\` を確認してください。"
@@ -60,7 +61,7 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
           git switch -c "${branch}"
-          git add LATEST.md data/jobs.json reports/
+          git add LATEST.md data/jobs.json data/events.json data/report-baseline.json reports/
 
           if git diff --cached --quiet; then
             echo "No report changes to publish."

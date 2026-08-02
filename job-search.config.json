@@ -18,6 +18,16 @@
     ],
     "pageSize": 100
   },
+  "events": {
+    "enabled": true,
+    "lookaheadDays": 120,
+    "chapters": [
+      {
+        "name": "GDG Tokyo",
+        "url": "https://gdg.community.dev/gdg-tokyo/"
+      }
+    ]
+  },
   "roleFilters": {
     "include": [
       "software engineer",
