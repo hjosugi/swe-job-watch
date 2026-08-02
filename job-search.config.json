@@ -25,8 +25,22 @@
       {
         "name": "GDG Tokyo",
         "url": "https://gdg.community.dev/gdg-tokyo/"
+      },
+      {
+        "name": "GDG on Campus IPUT Tokyo",
+        "url": "https://gdg.community.dev/gdg-on-campus-international-professional-university-of-technology-tokyo-japan/"
       }
-    ]
+    ],
+    "googleCloud": {
+      "enabled": true,
+      "url": "https://cloud.google.com/events?hl=ja",
+      "locationTerms": [
+        "Tokyo",
+        "東京",
+        "Japan",
+        "日本"
+      ]
+    }
   },
   "roleFilters": {
     "include": [

@@ -93,6 +93,7 @@ export function classifyEventContact({
   organizer = "",
   eventType = "",
   tags = [],
+  googleHosted = false,
 } = {}) {
   const body = textFromHtml(
     [
@@ -108,15 +109,26 @@ export function classifyEventContact({
   const reasons = [];
   let score = 0;
 
-  if (/\bgooglers?\b|google社員|グーグル社員/i.test(body)) {
-    reasons.push("Googlerの参加・登壇が明記");
+  if (
+    /\bgooglers?\b|google(?: cloud)?\s+(?:staff|employees?|experts?)|google(?: cloud)?\s*(?:社員|担当者|エキスパート)|グーグル社員/i.test(
+      body,
+    )
+  ) {
+    reasons.push("Googler・Google担当者の参加・登壇が明記");
+    score += 4;
+  } else if (googleHosted) {
+    reasons.push("Google主催の公式イベント");
     score += 4;
   }
   if (/\bgoogle(?: japan)?\b|グーグル/i.test(venueName)) {
     reasons.push("Google拠点で現地開催");
     score += 3;
   }
-  if (/交流|懇親|意見交換|質問|networking|office hours?/i.test(body)) {
+  if (
+    /交流|懇親|意見交換|質問|相談|サポート|networking|office hours?|support/i.test(
+      body,
+    )
+  ) {
     reasons.push("交流・質問機会が明記");
     score += 2;
   }

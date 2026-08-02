@@ -16,6 +16,7 @@ import {
 } from "./job-checker.js";
 import { fetchAmazonJobs } from "./sources/amazon.js";
 import { fetchGdgEvents } from "./sources/gdg-events.js";
+import { fetchGoogleCloudEvents } from "./sources/google-cloud-events.js";
 import { fetchGoogleJobs } from "./sources/google.js";
 
 const sourceDir = path.dirname(fileURLToPath(import.meta.url));
@@ -68,6 +69,9 @@ async function main() {
     }
     if (config.events?.enabled) {
       fetches.push(fetchGdgEvents(context, config));
+      if (config.events.googleCloud?.enabled) {
+        fetches.push(fetchGoogleCloudEvents(context, config));
+      }
     }
     const results = await Promise.all(fetches);
 

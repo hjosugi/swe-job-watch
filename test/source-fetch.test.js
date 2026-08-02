@@ -6,6 +6,11 @@ import {
   eventFromBevyData,
   fetchGdgEvents,
 } from "../src/sources/gdg-events.js";
+import {
+  eventFromGoogleCloudCard,
+  fetchGoogleCloudEvents,
+  parseJapaneseDateRange,
+} from "../src/sources/google-cloud-events.js";
 import { fetchGoogleJobs } from "../src/sources/google.js";
 
 const roleFilters = {
@@ -202,4 +207,131 @@ test("GDGに開催予定がなくても正常終了しページを閉じる", as
   assert.equal(closed, true);
   assert.deepEqual(result.events, []);
   assert.match(result.diagnostic, /開催予定0件/);
+});
+
+test("Google Cloud公式カードから日本の接点イベントを作る", () => {
+  const event = eventFromGoogleCloudCard(
+    {
+      title: "Build with Gemini Tokyo",
+      dateText: "9月3日～4日",
+      description:
+        "Build with Gemini Tokyo は 2 日間のハンズオンイベントです。" +
+        "Day 1：2026 年 9 月 3 日（木）13:00 - 19:30（予定） " +
+        "Day 2：2026 年 9 月 4 日（金）13:00 - 19:00（予定） " +
+        "ハイブリッド開催（現地会場参加 / オンラインリモート参加） " +
+        "・会場 TAKANAWA GATEWAY Convention Center " +
+        "※ Google Cloud 担当者によるサポートは現地会場のみです。",
+      labels: ["オンライン", "1日 6時間"],
+      url:
+        "https://cloudonair.withgoogle.com/events/" +
+        "build-with-gemini26q3?utm_source=test",
+    },
+    {
+      lookaheadDays: 120,
+      locationTerms: ["Tokyo", "東京", "Japan", "日本"],
+    },
+    new Date("2026-08-02T00:00:00Z"),
+  );
+
+  assert.equal(
+    event.key,
+    "google-cloud:https://cloudonair.withgoogle.com/events/" +
+      "build-with-gemini26q3",
+  );
+  assert.equal(event.startAt, "2026-09-03T04:00:00.000Z");
+  assert.equal(event.endAt, "2026-09-04T10:00:00.000Z");
+  assert.equal(event.format, "ハイブリッド");
+  assert.equal(event.location, "TAKANAWA GATEWAY Convention Center");
+  assert.equal(event.contactLevel, "高");
+  assert.match(event.contactReasons.join(" "), /Google担当者/);
+
+  const onlineOnly = eventFromGoogleCloudCard(
+    {
+      title: "Tokyo Cloud Webinar",
+      dateText: "9月10日",
+      description: "オンラインで開催します。",
+      labels: ["オンライン"],
+      url: "https://cloudonair.withgoogle.com/events/webinar",
+    },
+    {
+      lookaheadDays: 120,
+      locationTerms: ["Tokyo"],
+    },
+    new Date("2026-08-02T00:00:00Z"),
+  );
+  assert.equal(onlineOnly, null);
+});
+
+test("Google Cloudの日付表示を年またぎも含めて解釈する", () => {
+  const sameYear = parseJapaneseDateRange(
+    "9月3日～4日",
+    new Date("2026-08-02T00:00:00Z"),
+  );
+  assert.equal(sameYear.startAt.toISOString(), "2026-09-02T15:00:00.000Z");
+  assert.equal(sameYear.endAt.toISOString(), "2026-09-04T14:59:00.000Z");
+
+  const nextYear = parseJapaneseDateRange(
+    "1月8日",
+    new Date("2026-12-20T00:00:00Z"),
+  );
+  assert.equal(nextYear.startAt.toISOString(), "2027-01-07T15:00:00.000Z");
+});
+
+test("Google Cloud一覧はオンデマンドを除外してページを閉じる", async () => {
+  let closed = false;
+  const context = {
+    async newPage() {
+      return {
+        async close() {
+          closed = true;
+        },
+        async goto() {},
+        locator() {
+          return {
+            first() {
+              return { async waitFor() {} };
+            },
+            async evaluateAll() {
+              return [
+                {
+                  title: "Build with Gemini Tokyo",
+                  dateText: "9月3日～4日",
+                  description:
+                    "2026 年 9 月 3 日（木）13:00 - 19:30（予定） " +
+                    "ハイブリッド開催、Google Cloud 担当者がサポート。",
+                  labels: ["オンライン"],
+                  url: "https://cloudonair.withgoogle.com/events/build",
+                },
+                {
+                  title: "過去セッション",
+                  dateText: "",
+                  description: "",
+                  labels: ["オンデマンド", "オンライン"],
+                  url: "https://cloudonair.withgoogle.com/events/archive",
+                },
+              ];
+            },
+          };
+        },
+      };
+    },
+  };
+  const result = await fetchGoogleCloudEvents(
+    context,
+    {
+      events: {
+        googleCloud: {
+          enabled: true,
+          url: "https://cloud.google.com/events?hl=ja",
+          lookaheadDays: 120,
+          locationTerms: ["Tokyo"],
+        },
+      },
+    },
+    new Date("2026-08-02T00:00:00Z"),
+  );
+
+  assert.equal(closed, true);
+  assert.equal(result.events.length, 1);
+  assert.match(result.diagnostic, /公式一覧2件/);
 });
