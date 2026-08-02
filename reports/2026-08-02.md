@@ -40,8 +40,8 @@
 
 ## 取得メモ
 
-- Google: ChromiumでJavaScript描画後のDOMを5ページ確認（求人リンク35件、SWE 2件）
+- Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク38件、SWE 2件）
 - Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得8件、SWE 4件）
 - GDGイベント: 1チャプターを確認（開催予定0件、対象期間0件）
 
-_自動確認: 2026-08-02T05:17:28.331Z_
+_自動確認: 2026-08-02T05:37:32.740Z_
