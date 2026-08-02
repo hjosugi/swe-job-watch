@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-02T06:20:52.056Z",
+  "checkedAt": "2026-08-02T06:27:40.343Z",
   "events": [
     {
       "key": "gdg:127016",
@@ -20,26 +20,6 @@
         "GDGコミュニティ主催"
       ],
       "contactScore": 4
-    },
-    {
-      "key": "google-cloud:https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
-      "source": "Google Cloud Events",
-      "organizer": "Google Cloud",
-      "title": "Build with Gemini Tokyo",
-      "url": "https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
-      "registrationUrl": "https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
-      "startAt": "2026-09-03T04:00:00.000Z",
-      "endAt": "2026-09-04T10:00:00.000Z",
-      "timezone": "Asia/Tokyo",
-      "location": "TAKANAWA GATEWAY Convention Center",
-      "format": "ハイブリッド",
-      "contactLevel": "高",
-      "contactReasons": [
-        "Googler・Google担当者の参加・登壇が明記",
-        "交流・質問機会が明記",
-        "会話しやすい双方向形式"
-      ],
-      "contactScore": 7
     }
   ]
 }
