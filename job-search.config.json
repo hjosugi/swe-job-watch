@@ -33,8 +33,14 @@
     ],
     "googleCloud": {
       "enabled": true,
-      "url": "https://cloud.google.com/events?hl=ja",
+      "url": "https://cloud.google.com/events?hl=ja&ser=EiMKDWZpbHRlcl90eXBlXzEQASIQEg5maWx0ZXJfdmFsdWVfNQ",
       "regionFilter": "日本",
+      "regionOptions": [
+        "AMER",
+        "EMEA",
+        "APAC",
+        "日本"
+      ],
       "locationTerms": [
         "Tokyo",
         "東京",

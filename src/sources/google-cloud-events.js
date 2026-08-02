@@ -153,58 +153,27 @@ function eventLocation(body, locationTerms) {
     : "日本（会場は公式ページ参照）";
 }
 
-async function waitForFilterState(page, filterName, selected) {
-  await page.waitForFunction(
-    ({ filterName: expectedName, selected: expectedState }) =>
-      [...document.querySelectorAll(
-        'li[role="option"][track-type="checkbox"]',
-      )].some(
-        (element) =>
-          element.getAttribute("track-name") === expectedName &&
-          element.getAttribute("aria-selected") === expectedState,
-      ),
-    { filterName, selected: String(selected) },
-    { timeout: 20_000 },
-  );
+function filterOption(page, filterName) {
+  return page
+    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
+    .first();
 }
 
-async function applyExplicitFilter(page, filterName) {
-  const filter = page
-    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
-    .first();
-  await filter.waitFor({ state: "attached", timeout: 20_000 });
-
-  const selected = (await filter.getAttribute("aria-selected")) === "true";
-  const hasExplicitState = Boolean(
-    new URL(page.url()).searchParams.get("ser"),
-  );
-  if (selected && !hasExplicitState) {
-    await filter.click({ force: true });
-    await waitForFilterState(page, filterName, false);
-  }
-  if ((await filter.getAttribute("aria-selected")) !== "true") {
-    await filter.click({ force: true });
-  }
-  await waitForFilterState(page, filterName, true);
-  await page.waitForFunction(
-    () => Boolean(new URL(window.location.href).searchParams.get("ser")),
-    null,
-    { timeout: 20_000 },
-  );
-
-  const filteredUrl = page.url();
-  await page.goto(filteredUrl, {
-    waitUntil: "domcontentloaded",
-    timeout: 60_000,
-  });
-  const confirmed = page
-    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
-    .first();
-  await confirmed.waitFor({ state: "attached", timeout: 20_000 });
-  if ((await confirmed.getAttribute("aria-selected")) !== "true") {
+async function verifyExplicitFilter(page, filterName, filterOptions) {
+  if (!new URL(page.url()).searchParams.get("ser")) {
     throw new Error(
-      `Google Cloudイベントの${filterName}フィルタを固定できません。`,
+      `Google Cloudイベントの${filterName}フィルタURLがありません。`,
     );
+  }
+  for (const optionName of filterOptions) {
+    const confirmed = filterOption(page, optionName);
+    await confirmed.waitFor({ state: "attached", timeout: 20_000 });
+    const expected = optionName === filterName ? "true" : "false";
+    if ((await confirmed.getAttribute("aria-selected")) !== expected) {
+      throw new Error(
+        `Google Cloudイベントの${filterName}フィルタを排他的に固定できません。`,
+      );
+    }
   }
 }
 
@@ -295,7 +264,11 @@ export async function fetchGoogleCloudEvents(
       waitUntil: "domcontentloaded",
       timeout: 60_000,
     });
-    await applyExplicitFilter(page, settings.regionFilter);
+    await verifyExplicitFilter(
+      page,
+      settings.regionFilter,
+      settings.regionOptions,
+    );
     const cards = page.locator(EVENT_CARD_SELECTOR);
     await cards.first().waitFor({ state: "attached", timeout: 20_000 });
     const sources = await cards.evaluateAll((elements) =>
