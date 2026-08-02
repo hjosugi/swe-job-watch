@@ -194,12 +194,13 @@ async function applyExplicitFilter(page, filterName) {
 
   const filteredUrl = page.url();
   await page.goto(filteredUrl, {
-    waitUntil: "networkidle",
+    waitUntil: "domcontentloaded",
     timeout: 60_000,
   });
   const confirmed = page
     .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
     .first();
+  await confirmed.waitFor({ state: "attached", timeout: 20_000 });
   if ((await confirmed.getAttribute("aria-selected")) !== "true") {
     throw new Error(
       `Google Cloudイベントの${filterName}フィルタを固定できません。`,
