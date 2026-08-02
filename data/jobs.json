@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-07-18T03:14:31.341Z",
+  "checkedAt": "2026-08-02T01:50:25.068Z",
   "jobs": [
     {
       "key": "amazon:10464373",
@@ -12,6 +12,16 @@
       "levelEstimate": "Amazon L6 / Google L5前後 目安"
     },
     {
+      "key": "amazon:10486162",
+      "company": "amazon",
+      "companyName": "Amazon Japan G.K.",
+      "title": "Software Dev Engineer, Core Search NLP Document Enhancement",
+      "url": "https://www.amazon.jobs/en/jobs/10486162/software-dev-engineer-core-search-nlp-document-enhancement",
+      "location": "Tokyo, Japan",
+      "postedDate": "July 28, 2026",
+      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
+    },
+    {
       "key": "amazon:10448519",
       "company": "amazon",
       "companyName": "Amazon Japan G.K.",
@@ -20,16 +30,6 @@
       "location": "Tokyo, Japan",
       "postedDate": "June 15, 2026",
       "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
-    },
-    {
-      "key": "amazon:10463333",
-      "company": "amazon",
-      "companyName": "Amazon Japan G.K.",
-      "title": "Sr. Software Dev Engineer, JCFS JP Robotics",
-      "url": "https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics",
-      "location": "Tokyo, Japan",
-      "postedDate": "July 1, 2026",
-      "levelEstimate": "Amazon L6 / Google L5前後 目安"
     },
     {
       "key": "amazon:10376382",
