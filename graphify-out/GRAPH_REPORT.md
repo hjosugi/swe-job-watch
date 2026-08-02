@@ -1,21 +1,21 @@
 # Graph Report - swe-job-watch  (2026-08-02)
 
 ## Corpus Check
-- 49 files · ~37,329 words
+- 50 files · ~38,654 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 282 nodes · 340 edges · 37 communities (24 shown, 13 thin omitted)
+- 291 nodes · 375 edges · 37 communities (24 shown, 13 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `a63df22d`
+- Built from commit: `d06c90b0`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- gdg-events.js
+- normalizeSpace
 - What You Must Do When Invoked
 - What You Must Do When Invoked
 - What You Must Do When Invoked
@@ -54,16 +54,16 @@
 - copilot-instructions.md
 
 ## God Nodes (most connected - your core abstractions)
-1. `main()` - 13 edges
-2. `normalizeSpace()` - 12 edges
+1. `normalizeSpace()` - 16 edges
+2. `main()` - 14 edges
 3. `What You Must Do When Invoked` - 12 edges
 4. `What You Must Do When Invoked` - 12 edges
 5. `What You Must Do When Invoked` - 12 edges
-6. `renderReport()` - 10 edges
-7. `/graphify` - 10 edges
-8. `/graphify` - 10 edges
-9. `/graphify` - 10 edges
-10. `sortEvents()` - 9 edges
+6. `sortEvents()` - 11 edges
+7. `canonicalUrl()` - 10 edges
+8. `renderReport()` - 10 edges
+9. `eventFromGoogleCloudCard()` - 10 edges
+10. `/graphify` - 10 edges
 
 ## Surprising Connections (you probably didn't know these)
 - `main()` --calls--> `fetchAmazonJobs()`  [EXTRACTED]
@@ -72,19 +72,19 @@
   src/check-jobs.js → src/sources/gdg-events.js
 - `main()` --calls--> `fetchGoogleJobs()`  [EXTRACTED]
   src/check-jobs.js → src/sources/google.js
-- `eventFromBevyData()` --calls--> `classifyEventContact()`  [EXTRACTED]
-  src/sources/gdg-events.js → src/job-checker.js
 - `fetchGdgEvents()` --calls--> `sortEvents()`  [EXTRACTED]
   src/sources/gdg-events.js → src/job-checker.js
+- `main()` --calls--> `loadPreviousEvents()`  [EXTRACTED]
+  src/check-jobs.js → src/job-checker.js
 
 ## Import Cycles
 - None detected.
 
 ## Communities (37 total, 13 thin omitted)
 
-### Community 0 - "gdg-events.js"
-Cohesion: 0.20
-Nodes (19): canonicalUrl(), createRoleMatcher(), estimateLevel(), normalizeSpace(), amazonJobId(), fetchAmazonJobs(), fetchAmazonQuery(), eventFormat() (+11 more)
+### Community 0 - "normalizeSpace"
+Cohesion: 0.15
+Nodes (28): canonicalUrl(), classifyEventContact(), createRoleMatcher(), estimateLevel(), normalizeSpace(), textFromHtml(), amazonJobId(), fetchAmazonJobs() (+20 more)
 
 ### Community 1 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -99,8 +99,8 @@ Cohesion: 0.08
 Nodes (24): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+16 more)
 
 ### Community 4 - "job-checker.js"
-Cohesion: 0.20
-Nodes (22): loadConfig(), main(), parseArgs(), rootDir, sourceDir, classifyEventContact(), diffEvents(), diffJobs() (+14 more)
+Cohesion: 0.21
+Nodes (21): loadConfig(), main(), parseArgs(), rootDir, sourceDir, diffEvents(), diffJobs(), formatEventDate() (+13 more)
 
 ### Community 5 - "package.json"
 Cohesion: 0.12
@@ -188,6 +188,8 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _162 weakly-connected nodes found - possible documentation gaps or missing edges._
+- **Should `normalizeSpace` be split into smaller, more focused modules?**
+  _Cohesion score 0.1495798319327731 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**

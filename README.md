@@ -11,7 +11,8 @@ Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人、およ
 - Amazon / AWS: PlaywrightのブラウザーコンテキストからAmazon Jobs公式検索APIを取得
 - SWE系タイトルだけを残し、Google L4前後の簡易レベル目安を表示
 - 前回の `data/jobs.json` と比較して新着・掲載終了を表示
-- GDG Tokyoの公式ページから今後120日以内のイベントを確認
+- GDG Tokyo・GDG on Campus IPUT Tokyoの公式ページから今後120日以内のイベントを確認
+- Google Cloud公式イベント一覧から日本の現地・ハイブリッド開催を確認
 - Googler明記、Google会場、交流時間、双方向形式などを根拠に「接点期待度」を表示
 - `LATEST.md` と日付別の `reports/YYYY-MM-DD.md` を生成
 - 毎週金曜07:00 JSTにGitHub Actionsを実行し、週次PRを作成
@@ -68,4 +69,4 @@ node src/check-jobs.js --dry-run --headed
 
 求人・イベントサイト側のDOMやAPIが変わった場合はワークフローを失敗させ、壊れたスナップショットを公開しない設計です。レベル表記は求人タイトルからの目安であり、正式な採用レベルや報酬を保証するものではありません。
 
-イベントの「接点期待度」は公開ページにある登壇者属性、会場、交流時間、開催形式から判定します。GDGは独立したコミュニティであり、Google社そのものではありません。イベント参加や社員紹介を保証せず、参加者名簿などの個人情報も収集しません。情報源は[GDG Tokyo公式ページ](https://gdg.community.dev/gdg-tokyo/)と[Google Developer Groupsの説明](https://developers.google.com/community/gdg/)です。
+イベントの「接点期待度」は公開ページにある登壇者属性、会場、交流時間、開催形式から判定します。GDGは独立したコミュニティであり、Google社そのものではありません。イベント参加や社員紹介を保証せず、参加者名簿などの個人情報も収集しません。情報源は[GDG Tokyo公式ページ](https://gdg.community.dev/gdg-tokyo/)、[GDG on Campus IPUT Tokyo公式ページ](https://gdg.community.dev/gdg-on-campus-international-professional-university-of-technology-tokyo-japan/)、[Google Cloud公式イベント一覧](https://cloud.google.com/events?hl=ja)、[Google Developer Groupsの説明](https://developers.google.com/community/gdg/)です。
