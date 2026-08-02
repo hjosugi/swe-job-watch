@@ -1,21 +1,21 @@
 # Graph Report - swe-job-watch  (2026-08-02)
 
 ## Corpus Check
-- 50 files · ~38,654 words
+- 50 files · ~38,877 words
 - Verdict: corpus is large enough that graph structure adds value.
 
 ## Summary
-- 291 nodes · 375 edges · 37 communities (24 shown, 13 thin omitted)
+- 293 nodes · 379 edges · 38 communities (25 shown, 13 thin omitted)
 - Extraction: 100% EXTRACTED · 0% INFERRED · 0% AMBIGUOUS
 - Token cost: 0 input · 0 output
 
 ## Graph Freshness
-- Built from commit: `d06c90b0`
+- Built from commit: `ffb5c44c`
 - Run `git rev-parse HEAD` and compare to check if the graph is stale.
 - Run `graphify update .` after code changes (no API cost).
 
 ## Community Hubs (Navigation)
-- normalizeSpace
+- google-cloud-events.js
 - What You Must Do When Invoked
 - What You Must Do When Invoked
 - What You Must Do When Invoked
@@ -52,6 +52,7 @@
 - .codex/skills/graphify/references/extraction-spec.md
 - .copilot/skills/graphify/references/extraction-spec.md
 - copilot-instructions.md
+- google.js
 
 ## God Nodes (most connected - your core abstractions)
 1. `normalizeSpace()` - 16 edges
@@ -70,21 +71,21 @@
   src/check-jobs.js → src/sources/amazon.js
 - `main()` --calls--> `fetchGdgEvents()`  [EXTRACTED]
   src/check-jobs.js → src/sources/gdg-events.js
+- `main()` --calls--> `fetchGoogleCloudEvents()`  [EXTRACTED]
+  src/check-jobs.js → src/sources/google-cloud-events.js
 - `main()` --calls--> `fetchGoogleJobs()`  [EXTRACTED]
   src/check-jobs.js → src/sources/google.js
-- `fetchGdgEvents()` --calls--> `sortEvents()`  [EXTRACTED]
-  src/sources/gdg-events.js → src/job-checker.js
-- `main()` --calls--> `loadPreviousEvents()`  [EXTRACTED]
-  src/check-jobs.js → src/job-checker.js
+- `fetchAmazonQuery()` --calls--> `normalizeSpace()`  [EXTRACTED]
+  src/sources/amazon.js → src/job-checker.js
 
 ## Import Cycles
 - None detected.
 
-## Communities (37 total, 13 thin omitted)
+## Communities (38 total, 13 thin omitted)
 
-### Community 0 - "normalizeSpace"
-Cohesion: 0.15
-Nodes (28): canonicalUrl(), classifyEventContact(), createRoleMatcher(), estimateLevel(), normalizeSpace(), textFromHtml(), amazonJobId(), fetchAmazonJobs() (+20 more)
+### Community 0 - "google-cloud-events.js"
+Cohesion: 0.18
+Nodes (21): classifyEventContact(), normalizeSpace(), textFromHtml(), eventFormat(), eventFromBevyData(), fetchChapterEventUrls(), fetchEventData(), fetchGdgEvents() (+13 more)
 
 ### Community 1 - "What You Must Do When Invoked"
 Cohesion: 0.08
@@ -99,8 +100,8 @@ Cohesion: 0.08
 Nodes (24): For /graphify add and --watch, For /graphify query, For the commit hook and native CLAUDE.md integration, For --update and --cluster-only, /graphify, Honesty Rules, Interpreter guard for subcommands, Part A - Structural extraction for code files (+16 more)
 
 ### Community 4 - "job-checker.js"
-Cohesion: 0.21
-Nodes (21): loadConfig(), main(), parseArgs(), rootDir, sourceDir, diffEvents(), diffJobs(), formatEventDate() (+13 more)
+Cohesion: 0.22
+Nodes (20): loadConfig(), main(), parseArgs(), rootDir, sourceDir, diffEvents(), diffJobs(), formatEventDate() (+12 more)
 
 ### Community 5 - "package.json"
 Cohesion: 0.12
@@ -178,6 +179,10 @@ Nodes (3): For git commit hook, For native CLAUDE.md integration, graphify refer
 Cohesion: 0.50
 Nodes (3): For --cluster-only, For --update (incremental re-extraction), graphify reference: incremental update and cluster-only
 
+### Community 37 - "google.js"
+Cohesion: 0.36
+Nodes (10): canonicalUrl(), createRoleMatcher(), estimateLevel(), amazonJobId(), fetchAmazonJobs(), fetchAmazonQuery(), extractPageJobs(), fetchGoogleJobs() (+2 more)
+
 ## Knowledge Gaps
 - **162 isolated node(s):** `name`, `version`, `private`, `description`, `type` (+157 more)
   These have ≤1 connection - possible missing edges or undocumented components.
@@ -188,8 +193,6 @@ _Questions this graph is uniquely positioned to answer:_
 
 - **What connects `name`, `version`, `private` to the rest of the system?**
   _162 weakly-connected nodes found - possible documentation gaps or missing edges._
-- **Should `normalizeSpace` be split into smaller, more focused modules?**
-  _Cohesion score 0.1495798319327731 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**
   _Cohesion score 0.08 - nodes in this community are weakly interconnected._
 - **Should `What You Must Do When Invoked` be split into smaller, more focused modules?**

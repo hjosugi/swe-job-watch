@@ -7,6 +7,8 @@ import {
 
 const EVENT_CARD_SELECTOR =
   'a[track-type="card"][track-metadata-eventdetail]';
+const FILTER_OPTION_SELECTOR =
+  'li[role="option"][track-type="checkbox"]';
 const JST_OFFSET_MS = 9 * 60 * 60 * 1000;
 const DAY_MS = 24 * 60 * 60 * 1000;
 
@@ -151,6 +153,60 @@ function eventLocation(body, locationTerms) {
     : "日本（会場は公式ページ参照）";
 }
 
+async function waitForFilterState(page, filterName, selected) {
+  await page.waitForFunction(
+    ({ filterName: expectedName, selected: expectedState }) =>
+      [...document.querySelectorAll(
+        'li[role="option"][track-type="checkbox"]',
+      )].some(
+        (element) =>
+          element.getAttribute("track-name") === expectedName &&
+          element.getAttribute("aria-selected") === expectedState,
+      ),
+    { filterName, selected: String(selected) },
+    { timeout: 20_000 },
+  );
+}
+
+async function applyExplicitFilter(page, filterName) {
+  const filter = page
+    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
+    .first();
+  await filter.waitFor({ state: "attached", timeout: 20_000 });
+
+  const selected = (await filter.getAttribute("aria-selected")) === "true";
+  const hasExplicitState = Boolean(
+    new URL(page.url()).searchParams.get("ser"),
+  );
+  if (selected && !hasExplicitState) {
+    await filter.click({ force: true });
+    await waitForFilterState(page, filterName, false);
+  }
+  if ((await filter.getAttribute("aria-selected")) !== "true") {
+    await filter.click({ force: true });
+  }
+  await waitForFilterState(page, filterName, true);
+  await page.waitForFunction(
+    () => Boolean(new URL(window.location.href).searchParams.get("ser")),
+    null,
+    { timeout: 20_000 },
+  );
+
+  const filteredUrl = page.url();
+  await page.goto(filteredUrl, {
+    waitUntil: "networkidle",
+    timeout: 60_000,
+  });
+  const confirmed = page
+    .locator(FILTER_OPTION_SELECTOR, { hasText: filterName })
+    .first();
+  if ((await confirmed.getAttribute("aria-selected")) !== "true") {
+    throw new Error(
+      `Google Cloudイベントの${filterName}フィルタを固定できません。`,
+    );
+  }
+}
+
 export function eventFromGoogleCloudCard(
   card,
   { lookaheadDays = 120, locationTerms = [] } = {},
@@ -238,6 +294,7 @@ export async function fetchGoogleCloudEvents(
       waitUntil: "domcontentloaded",
       timeout: 60_000,
     });
+    await applyExplicitFilter(page, settings.regionFilter);
     const cards = page.locator(EVENT_CARD_SELECTOR);
     await cards.first().waitFor({ state: "attached", timeout: 20_000 });
     const sources = await cards.evaluateAll((elements) =>
@@ -268,7 +325,8 @@ export async function fetchGoogleCloudEvents(
     return {
       events: sortEvents(events),
       diagnostic:
-        `Google Cloudイベント: 公式一覧${sources.length}件を確認` +
+        `Google Cloudイベント: ${settings.regionFilter}フィルタで` +
+        `公式一覧${sources.length}件を確認` +
         `（日本の現地・ハイブリッド対象${events.length}件）`,
     };
   } finally {

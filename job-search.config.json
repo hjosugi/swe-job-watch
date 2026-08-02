@@ -34,6 +34,7 @@
     "googleCloud": {
       "enabled": true,
       "url": "https://cloud.google.com/events?hl=ja",
+      "regionFilter": "日本",
       "locationTerms": [
         "Tokyo",
         "東京",
