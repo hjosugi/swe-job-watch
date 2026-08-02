@@ -8,7 +8,7 @@
 - Amazon / AWS: 4件
 - 新着: 1件
 - 掲載終了: 1件
-- 接点イベント: 2件（新着 2件）
+- 接点イベント: 1件（新着 1件）
 
 ## Google（東京）
 
@@ -38,18 +38,14 @@
   - 2026/08/29 14:00 (Asia/Tokyo) / 東京国際工科専門職大学 総合校舎コクーンタワー, 新宿区, 東京都 / 現地開催
   - 接点期待度: 中 — 交流・質問機会が明記 / 会話しやすい双方向形式 / GDGコミュニティ主催
   - 主催: GDG on Campus International Professional University of Technology - Tokyo, Japan
-- [Build with Gemini Tokyo](https://cloudonair.withgoogle.com/events/build-with-gemini26q3) 🆕
-  - 2026/09/03 13:00 (Asia/Tokyo) / TAKANAWA GATEWAY Convention Center / ハイブリッド
-  - 接点期待度: 高 — Googler・Google担当者の参加・登壇が明記 / 交流・質問機会が明記 / 会話しやすい双方向形式
-  - 主催: Google Cloud
 
 > 接点期待度は公開ページにある登壇者属性、会場、交流時間、開催形式から判定した目安です。参加や社員紹介を保証するものではありません。
 
 ## 取得メモ
 
-- Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク38件、SWE 2件）
+- Google: ChromiumでJavaScript描画後のDOMを6ページ確認（求人リンク36件、SWE 2件）
 - Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得8件、SWE 4件）
 - GDGイベント: 2チャプターを確認（開催予定1件、対象期間1件）
-- Google Cloudイベント: 公式一覧12件を確認（日本の現地・ハイブリッド対象1件）
+- Google Cloudイベント: 公式一覧12件を確認（日本の現地・ハイブリッド対象0件）
 
-_自動確認: 2026-08-02T06:10:33.363Z_
+_自動確認: 2026-08-02T06:16:48.300Z_
