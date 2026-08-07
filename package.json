@@ -11,7 +11,9 @@
     "jobs:check": "node src/check-jobs.js",
     "jobs:dry-run": "node src/check-jobs.js --dry-run",
     "lint": "node --check src/check-jobs.js && node --check src/job-checker.js && node --check src/sources/google.js && node --check src/sources/amazon.js && node --check src/sources/gdg-events.js && node --check src/sources/google-cloud-events.js",
-    "test": "node --test"
+    "test": "node --test",
+    "graphify:setup": "sh scripts/graphify.sh setup",
+    "graphify:update": "sh scripts/graphify.sh update"
   },
   "dependencies": {
     "playwright": "1.61.1"

@@ -5,3 +5,9 @@ test-results/
 *.log
 graphify-out/[0-9][0-9][0-9][0-9]-*/
 graphify-out/cache/
+.claude/skills/graphify/
+.claude/settings.local.json
+.copilot/skills/graphify/
+.codex/skills/graphify/
+.codex/hooks.json
+graphify-out/
