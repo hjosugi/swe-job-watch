@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-02T06:40:24.575Z",
+  "checkedAt": "2026-08-07T00:01:20.186Z",
   "jobs": [
     {
       "key": "amazon:10464373",
@@ -32,31 +32,11 @@
       "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
     },
     {
-      "key": "amazon:10376382",
-      "company": "amazon",
-      "companyName": "Amazon Web Services Japan GK",
-      "title": "Sr. Software Dev Engineer, PostgreSQL Contributors",
-      "url": "https://www.amazon.jobs/en/jobs/10376382/sr-software-dev-engineer-postgresql-contributors",
-      "location": "Virtual, Japan",
-      "postedDate": "March 25, 2026",
-      "levelEstimate": "Amazon L6 / Google L5前後 目安"
-    },
-    {
       "key": "google:118586037713674950",
       "company": "google",
       "companyName": "Google",
       "title": "Senior Software Engineer, Android CI Infrastructure",
       "url": "https://www.google.com/about/careers/applications/jobs/results/118586037713674950-senior-software-engineer-android-ci-infrastructure",
-      "location": "Tokyo, Japan",
-      "postedDate": "",
-      "levelEstimate": "Google L5 目安"
-    },
-    {
-      "key": "google:118761537694245574",
-      "company": "google",
-      "companyName": "Google",
-      "title": "Senior Software Engineer, Search AI/ML",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/118761537694245574-senior-software-engineer-search-aiml",
       "location": "Tokyo, Japan",
       "postedDate": "",
       "levelEstimate": "Google L5 目安"

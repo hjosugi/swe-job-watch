@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-02",
+  "date": "2026-08-07",
   "jobs": [
     {
       "key": "amazon:10464373",
@@ -12,6 +12,16 @@
       "levelEstimate": "Amazon L6 / Google L5前後 目安"
     },
     {
+      "key": "amazon:10486162",
+      "company": "amazon",
+      "companyName": "Amazon Japan G.K.",
+      "title": "Software Dev Engineer, Core Search NLP Document Enhancement",
+      "url": "https://www.amazon.jobs/en/jobs/10486162/software-dev-engineer-core-search-nlp-document-enhancement",
+      "location": "Tokyo, Japan",
+      "postedDate": "July 28, 2026",
+      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
+    },
+    {
       "key": "amazon:10448519",
       "company": "amazon",
       "companyName": "Amazon Japan G.K.",
@@ -20,16 +30,6 @@
       "location": "Tokyo, Japan",
       "postedDate": "June 15, 2026",
       "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
-    },
-    {
-      "key": "amazon:10463333",
-      "company": "amazon",
-      "companyName": "Amazon Japan G.K.",
-      "title": "Sr. Software Dev Engineer, JCFS JP Robotics",
-      "url": "https://www.amazon.jobs/en/jobs/10463333/sr-software-dev-engineer-jcfs-jp-robotics",
-      "location": "Tokyo, Japan",
-      "postedDate": "July 1, 2026",
-      "levelEstimate": "Amazon L6 / Google L5前後 目安"
     },
     {
       "key": "amazon:10376382",
@@ -62,5 +62,46 @@
       "levelEstimate": "Google L5 目安"
     }
   ],
-  "events": []
+  "events": [
+    {
+      "key": "gdg:127016",
+      "source": "Google Developer Groups",
+      "organizer": "GDG on Campus International Professional University of Technology - Tokyo, Japan",
+      "title": "【TOKYO】AIワークショップ",
+      "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-tokyo-aiwakushiyotsupu-1/",
+      "registrationUrl": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-tokyo-aiwakushiyotsupu-1/",
+      "startAt": "2026-08-29T05:00:00.000Z",
+      "endAt": "2026-08-29T07:00:00.000Z",
+      "timezone": "Asia/Tokyo",
+      "location": "東京国際工科専門職大学 総合校舎コクーンタワー, 新宿区, 東京都",
+      "format": "現地開催",
+      "contactLevel": "中",
+      "contactReasons": [
+        "交流・質問機会が明記",
+        "会話しやすい双方向形式",
+        "GDGコミュニティ主催"
+      ],
+      "contactScore": 4
+    },
+    {
+      "key": "google-cloud:https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
+      "source": "Google Cloud Events",
+      "organizer": "Google Cloud",
+      "title": "Build with Gemini Tokyo",
+      "url": "https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
+      "registrationUrl": "https://cloudonair.withgoogle.com/events/build-with-gemini26q3",
+      "startAt": "2026-09-03T04:00:00.000Z",
+      "endAt": "2026-09-04T10:00:00.000Z",
+      "timezone": "Asia/Tokyo",
+      "location": "TAKANAWA GATEWAY Convention Center",
+      "format": "ハイブリッド",
+      "contactLevel": "高",
+      "contactReasons": [
+        "Googler・Google担当者の参加・登壇が明記",
+        "交流・質問機会が明記",
+        "会話しやすい双方向形式"
+      ],
+      "contactScore": 7
+    }
+  ]
 }
