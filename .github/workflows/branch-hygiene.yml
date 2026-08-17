@@ -36,15 +36,15 @@ jobs:
                   continue
                   ;;
                 bot/weekly-jobs-*)
-                  open_count="$(gh pr list --state open --head "${branch}" --json number --jq 'length')"
+                  open_count="$(gh pr list -R "${GITHUB_REPOSITORY}" --state open --head "${branch}" --json number --jq 'length')"
                   if [[ "${open_count}" == "0" ]]; then
                     echo "Deleting stale weekly branch: ${branch}"
                     gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${branch}"
                   fi
                   ;;
                 agent/*)
-                  merged_count="$(gh pr list --state merged --head "${branch}" --json number --jq 'length')"
-                  open_count="$(gh pr list --state open --head "${branch}" --json number --jq 'length')"
+                  merged_count="$(gh pr list -R "${GITHUB_REPOSITORY}" --state merged --head "${branch}" --json number --jq 'length')"
+                  open_count="$(gh pr list -R "${GITHUB_REPOSITORY}" --state open --head "${branch}" --json number --jq 'length')"
                   if [[ "${merged_count}" != "0" && "${open_count}" == "0" ]]; then
                     echo "Deleting merged agent branch: ${branch}"
                     gh api -X DELETE "repos/${GITHUB_REPOSITORY}/git/refs/heads/${branch}"
