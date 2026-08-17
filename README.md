@@ -5,6 +5,8 @@
 
 Google Careers（東京）と Amazon / AWS Jobs（日本）のSWE求人、およびGoogler・Google技術コミュニティとの接点が期待できる公開イベントを毎週確認し、直接リンク付きのレポートをPull Requestにするツールです。
 
+**今すぐ応募する候補:** [`APPLY_NOW.md`](./APPLY_NOW.md) — Google/Amazonに加えて、Apple、Woven by Toyota、LINEヤフー、PayPay銀行の公式求人を手動で直接確認した短いリストです。
+
 ## 何をするか
 
 - Google: PlaywrightのChromiumでCareersを開き、JavaScript描画後のDOMから求人を取得
@@ -64,7 +66,8 @@ node src/check-jobs.js --dry-run --headed
 
 ## 出力
 
-- [`LATEST.md`](./LATEST.md): 最新レポート
+- [`APPLY_NOW.md`](./APPLY_NOW.md): 公式ページを直接確認した現在の応募候補（Google/Amazon以外も含む）
+- [`LATEST.md`](./LATEST.md): 最新の自動レポート
 - [`data/jobs.json`](./data/jobs.json): 前回比較用の最新スナップショット
 - [`data/events.json`](./data/events.json): 開催予定イベントの最新スナップショット
 - [`data/report-baseline.json`](./data/report-baseline.json): 同日再実行でも差分を保持する日次基準
