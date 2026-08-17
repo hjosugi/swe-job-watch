@@ -47,7 +47,7 @@ jobs:
         shell: bash
         run: |
           report_date="$(TZ=Asia/Tokyo date +%F)"
-          branch="bot/weekly-jobs-${report_date}"
+          branch="bot/weekly-jobs"
           title="jobs: weekly update ${report_date}"
           body="Google Tokyo と Amazon / AWS Japan の週次SWE求人チェックです。
 
