@@ -4,7 +4,11 @@
     "location": "Tokyo, Japan",
     "queries": [
       "software engineer",
-      "software development engineer"
+      "software development engineer",
+      "site reliability engineer",
+      "forward deployed engineer",
+      "developer relations engineer",
+      "strategic cloud engineer"
     ],
     "maxPagesPerQuery": 5
   },
@@ -54,6 +58,10 @@
       "software engineer",
       "software development engineer",
       "software dev engineer",
+      "site reliability engineer",
+      "forward deployed engineer",
+      "developer relations engineer",
+      "strategic cloud engineer",
       "ソフトウェア エンジニア",
       "ソフトウェアエンジニア"
     ],
