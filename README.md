@@ -57,7 +57,9 @@ node src/check-jobs.js --dry-run --headed
 - `pull-requests: write`
 - Settings → Actions → General → Workflow permissions でPull Request作成を許可
 
-週次PRのブランチ名は `bot/weekly-jobs-YYYY-MM-DD` です。同じ日に再実行すると同じPRを更新します。
+週次PRは固定ブランチ `bot/weekly-jobs` を再利用します。PRを未マージのまま次週を迎えた場合も同じPRを更新するため、日付ごとのbotブランチや週次PRが増え続けません。
+
+[`branch-hygiene.yml`](./.github/workflows/branch-hygiene.yml) は `main` 更新時に、open PRがない旧 `bot/weekly-jobs-*` ブランチと、PRがmerge済みの `agent/*` ブランチを削除します。
 
 ## 出力
 
