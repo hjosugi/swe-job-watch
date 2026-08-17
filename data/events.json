@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-02T06:40:24.575Z",
+  "checkedAt": "2026-08-13T22:15:30.224Z",
   "events": [
     {
       "key": "gdg:127016",
@@ -40,6 +40,25 @@
         "会話しやすい双方向形式"
       ],
       "contactScore": 7
+    },
+    {
+      "key": "gdg:128545",
+      "source": "Google Developer Groups",
+      "organizer": "GDG on Campus International Professional University of Technology - Tokyo, Japan",
+      "title": "デザインスプリント ワークショップ",
+      "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-dezainsupurinto-wakushiyotsupu/",
+      "registrationUrl": "https://greek-academy.connpass.com/event/402058/",
+      "startAt": "2026-09-05T01:00:00.000Z",
+      "endAt": "2026-09-05T08:00:00.000Z",
+      "timezone": "Asia/Tokyo",
+      "location": "国際工科専門職大学 東京キャンパス, Shinjuku City, Tokyo",
+      "format": "オンライン",
+      "contactLevel": "参考",
+      "contactReasons": [
+        "会話しやすい双方向形式",
+        "GDGコミュニティ主催"
+      ],
+      "contactScore": 2
     }
   ]
 }
