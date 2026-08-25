@@ -1,5 +1,5 @@
 {
-  "date": "2026-08-13",
+  "date": "2026-08-20",
   "jobs": [
     {
       "key": "amazon:10464373",
@@ -22,24 +22,14 @@
       "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
     },
     {
-      "key": "amazon:10448519",
+      "key": "amazon:10495479",
       "company": "amazon",
       "companyName": "Amazon Japan G.K.",
-      "title": "Software Development Engineer, Japan Seller Services Tech",
-      "url": "https://www.amazon.jobs/en/jobs/10448519/software-development-engineer-japan-seller-services-tech",
+      "title": "Software Development Engineers - Pricing & Promotions, Amazon Japan",
+      "url": "https://www.amazon.jobs/en/jobs/10495479/software-development-engineers-pricing-promotions-amazon-japan",
       "location": "Tokyo, Japan",
-      "postedDate": "June 15, 2026",
-      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
-    },
-    {
-      "key": "amazon:10376382",
-      "company": "amazon",
-      "companyName": "Amazon Web Services Japan GK",
-      "title": "Sr. Software Dev Engineer, PostgreSQL Contributors",
-      "url": "https://www.amazon.jobs/en/jobs/10376382/sr-software-dev-engineer-postgresql-contributors",
-      "location": "Virtual, Japan",
-      "postedDate": "March 25, 2026",
-      "levelEstimate": "Amazon L6 / Google L5前後 目安"
+      "postedDate": "August 7, 2026",
+      "levelEstimate": "レベル要確認"
     },
     {
       "key": "google:118586037713674950",
@@ -47,16 +37,6 @@
       "companyName": "Google",
       "title": "Senior Software Engineer, Android CI Infrastructure",
       "url": "https://www.google.com/about/careers/applications/jobs/results/118586037713674950-senior-software-engineer-android-ci-infrastructure",
-      "location": "Tokyo, Japan",
-      "postedDate": "",
-      "levelEstimate": "Google L5 目安"
-    },
-    {
-      "key": "google:118761537694245574",
-      "company": "google",
-      "companyName": "Google",
-      "title": "Senior Software Engineer, Search AI/ML",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/118761537694245574-senior-software-engineer-search-aiml",
       "location": "Tokyo, Japan",
       "postedDate": "",
       "levelEstimate": "Google L5 目安"
@@ -102,6 +82,25 @@
         "会話しやすい双方向形式"
       ],
       "contactScore": 7
+    },
+    {
+      "key": "gdg:128545",
+      "source": "Google Developer Groups",
+      "organizer": "GDG on Campus International Professional University of Technology - Tokyo, Japan",
+      "title": "デザインスプリント ワークショップ",
+      "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-dezainsupurinto-wakushiyotsupu/",
+      "registrationUrl": "https://greek-academy.connpass.com/event/402058/",
+      "startAt": "2026-09-05T01:00:00.000Z",
+      "endAt": "2026-09-05T08:00:00.000Z",
+      "timezone": "Asia/Tokyo",
+      "location": "国際工科専門職大学 東京キャンパス, Shinjuku City, Tokyo",
+      "format": "オンライン",
+      "contactLevel": "参考",
+      "contactReasons": [
+        "会話しやすい双方向形式",
+        "GDGコミュニティ主催"
+      ],
+      "contactScore": 2
     }
   ]
 }

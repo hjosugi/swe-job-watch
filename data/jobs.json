@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-08-13T22:15:30.224Z",
+  "checkedAt": "2026-08-20T22:06:26.102Z",
   "jobs": [
     {
       "key": "amazon:10464373",
@@ -29,6 +29,46 @@
       "url": "https://www.amazon.jobs/en/jobs/10495479/software-development-engineers-pricing-promotions-amazon-japan",
       "location": "Tokyo, Japan",
       "postedDate": "August 7, 2026",
+      "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:140942337948689094",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Forward Deployed Engineer, GenAI, Google Cloud (English, Japanese)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/140942337948689094-forward-deployed-engineer-genai-google-cloud-english-japanese",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:81349030524658374",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/81349030524658374-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:114597873990935238",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Geo Auto Forward Deployed Engineer (Japanese, English)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/114597873990935238-geo-auto-forward-deployed-engineer-japanese-english",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:118540325403665094",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/118540325403665094-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
       "levelEstimate": "レベル要確認"
     },
     {
