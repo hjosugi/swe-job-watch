@@ -1,26 +1,6 @@
 {
-  "checkedAt": "2026-08-20T22:06:26.102Z",
+  "checkedAt": "2026-09-03T22:08:19.368Z",
   "jobs": [
-    {
-      "key": "amazon:10464373",
-      "company": "amazon",
-      "companyName": "Amazon Japan G.K.",
-      "title": "Senior Software Dev Engineer, JP Manga",
-      "url": "https://www.amazon.jobs/en/jobs/10464373/senior-software-dev-engineer-jp-manga",
-      "location": "Tokyo, Japan",
-      "postedDate": "July 1, 2026",
-      "levelEstimate": "Amazon L6 / Google L5前後 目安"
-    },
-    {
-      "key": "amazon:10486162",
-      "company": "amazon",
-      "companyName": "Amazon Japan G.K.",
-      "title": "Software Dev Engineer, Core Search NLP Document Enhancement",
-      "url": "https://www.amazon.jobs/en/jobs/10486162/software-dev-engineer-core-search-nlp-document-enhancement",
-      "location": "Tokyo, Japan",
-      "postedDate": "July 28, 2026",
-      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
-    },
     {
       "key": "amazon:10495479",
       "company": "amazon",
@@ -62,24 +42,14 @@
       "levelEstimate": "レベル要確認"
     },
     {
-      "key": "google:118540325403665094",
+      "key": "google:96898409864012486",
       "company": "google",
       "companyName": "Google",
       "title": "Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/118540325403665094-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/96898409864012486-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
       "location": "Tokyo, Japan",
       "postedDate": "",
       "levelEstimate": "レベル要確認"
-    },
-    {
-      "key": "google:118586037713674950",
-      "company": "google",
-      "companyName": "Google",
-      "title": "Senior Software Engineer, Android CI Infrastructure",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/118586037713674950-senior-software-engineer-android-ci-infrastructure",
-      "location": "Tokyo, Japan",
-      "postedDate": "",
-      "levelEstimate": "Google L5 目安"
     }
   ]
 }
