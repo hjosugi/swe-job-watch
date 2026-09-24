@@ -1,5 +1,5 @@
 {
-  "checkedAt": "2026-09-17T22:07:11.057Z",
+  "checkedAt": "2026-09-24T22:07:32.170Z",
   "events": [
     {
       "key": "gdg:129911",
@@ -20,6 +20,26 @@
         "GDGコミュニティ主催"
       ],
       "contactScore": 6
+    },
+    {
+      "key": "gdg:131056",
+      "source": "Google Developer Groups",
+      "organizer": "GDG on Campus International Professional University of Technology - Tokyo, Japan",
+      "title": "【OSAKA】AIワークショップ",
+      "url": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-osaka-aiwakushiyotsupu-3/",
+      "registrationUrl": "https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-osaka-aiwakushiyotsupu-3/",
+      "startAt": "2026-10-18T04:00:00.000Z",
+      "endAt": "2026-10-18T07:00:00.000Z",
+      "timezone": "Asia/Tokyo",
+      "location": "国際工科専門職大学 大阪キャンパス, 大阪市, 大阪府",
+      "format": "現地開催",
+      "contactLevel": "中",
+      "contactReasons": [
+        "交流・質問機会が明記",
+        "会話しやすい双方向形式",
+        "GDGコミュニティ主催"
+      ],
+      "contactScore": 4
     }
   ]
 }
