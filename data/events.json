@@ -1,23 +1,22 @@
 {
-  "checkedAt": "2026-09-24T22:07:32.170Z",
+  "checkedAt": "2026-10-08T22:08:08.119Z",
   "events": [
     {
-      "key": "gdg:129911",
-      "source": "Google Developer Groups",
-      "organizer": "GDG Tokyo",
-      "title": "Gemma Meetup 2026 [Road to DevFest Tokyo #1]",
-      "url": "https://gdg.community.dev/events/details/google-gdg-tokyo-presents-gemma-meetup-2026-road-to-devfest-tokyo-1/",
-      "registrationUrl": "https://gdg-tokyo.connpass.com/event/405340/",
-      "startAt": "2026-10-01T10:00:05.000Z",
-      "endAt": "2026-10-01T12:30:00.000Z",
+      "key": "google-cloud:https://cloudonair.withgoogle.com/events/infra-db-summit26",
+      "source": "Google Cloud Events",
+      "organizer": "Google Cloud",
+      "title": "AI が使う基盤、AI で作る基盤。AI-Ready Infra & DB Summit",
+      "url": "https://cloudonair.withgoogle.com/events/infra-db-summit26",
+      "registrationUrl": "https://cloudonair.withgoogle.com/events/infra-db-summit26",
+      "startAt": "2026-10-16T05:00:00.000Z",
+      "endAt": "2026-10-16T09:00:00.000Z",
       "timezone": "Asia/Tokyo",
-      "location": "Google Japan - Shibuya, 渋谷区, 東京都",
-      "format": "オンライン",
+      "location": "参加者全員に『2026 年度版 クラウド・インフラ最新動向』をプレゼント 開催日 : 2026 年 10 月 16 日（金） 14:00 - 18:00 [会場限定] 懇親会 18:00 - 19:0",
+      "format": "ハイブリッド",
       "contactLevel": "高",
       "contactReasons": [
-        "Google拠点で現地開催",
-        "交流・質問機会が明記",
-        "GDGコミュニティ主催"
+        "Google主催の公式イベント",
+        "交流・質問機会が明記"
       ],
       "contactScore": 6
     },
