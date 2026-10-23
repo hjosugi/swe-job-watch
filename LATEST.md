@@ -1,37 +1,58 @@
-# 今週のSWE求人・接点イベント（2026-09-24）
+# 今週のSWE求人・接点イベント（2026-10-23）
 
 対象: Google 東京、Amazon / AWS 日本のSWE求人と、Googler・Google技術コミュニティとの接点が期待できる公開イベント。
 
 ## サマリー
 
-- Google: 3件
+- Google: 4件
 - Amazon / AWS: 1件
-- 新着: 0件
-- 掲載終了: 0件
-- 接点イベント: 2件（新着 1件）
+- 新着: 5件
+- 掲載終了: 4件
+- 接点イベント: 5件（新着 5件）
 
 ## Google（東京）
 
-- [Forward Deployed Engineer, Gen AI, Google Cloud (English, Japanese)](https://www.google.com/about/careers/applications/jobs/results/117890978424988358-forward-deployed-engineer-gen-ai-google-cloud-english-japanese)
+- [Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/116466339920388806-forward-deployed-engineer-generative-ai-google-cloud-japanese-english) 🆕
   - レベル要確認 / Tokyo, Japan / Google
-- [Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/81349030524658374-forward-deployed-engineer-generative-ai-google-cloud-japanese-english)
+- [Geo Auto Forward Deployed Engineer (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/101631900837126854-geo-auto-forward-deployed-engineer-japanese-english) 🆕
   - レベル要確認 / Tokyo, Japan / Google
-- [Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/96898409864012486-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english)
+- [Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/140967582155842246-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english) 🆕
   - レベル要確認 / Tokyo, Japan / Google
+- [Software Engineer III, Search](https://www.google.com/about/careers/applications/jobs/results/142102724832305862-software-engineer-iii-search) 🆕
+  - Google L4 目安 / Tokyo, Japan / Google
 
 ## Amazon / AWS（日本）
 
+- [【Class of 2027／Full-Time】Software Development Engineer, JP Seller Tech team](https://www.amazon.jobs/en/jobs/10582330/class-of-2027-full-time-software-development-engineer-jp-seller-tech-team) 🆕
+  - Amazon L5候補 / Google L4前後 目安 / Tokyo, Japan / 掲載 October 19, 2026 / Amazon Japan G.K.
+
+## 前回から掲載終了
+
 - [Software Development Engineers - Pricing & Promotions, Amazon Japan](https://www.amazon.jobs/en/jobs/10495479/software-development-engineers-pricing-promotions-amazon-japan)
-  - レベル要確認 / Tokyo, Japan / 掲載 August 7, 2026 / Amazon Japan G.K.
+- [Forward Deployed Engineer, Gen AI, Google Cloud (English, Japanese)](https://www.google.com/about/careers/applications/jobs/results/117890978424988358-forward-deployed-engineer-gen-ai-google-cloud-english-japanese)
+- [Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/81349030524658374-forward-deployed-engineer-generative-ai-google-cloud-japanese-english)
+- [Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)](https://www.google.com/about/careers/applications/jobs/results/96898409864012486-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english)
 
 ## Googler・Google技術コミュニティと会えるイベント
 
-- [Gemma Meetup 2026 [Road to DevFest Tokyo #1]](https://gdg-tokyo.connpass.com/event/405340/)
-  - 2026/10/01 19:00 (Asia/Tokyo) / Google Japan - Shibuya, 渋谷区, 東京都 / オンライン
-  - 接点期待度: 高 — Google拠点で現地開催 / 交流・質問機会が明記 / GDGコミュニティ主催
-  - 主催: GDG Tokyo / [公式詳細](https://gdg.community.dev/events/details/google-gdg-tokyo-presents-gemma-meetup-2026-road-to-devfest-tokyo-1/)
-- [【OSAKA】AIワークショップ](https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-osaka-aiwakushiyotsupu-3/) 🆕
-  - 2026/10/18 13:00 (Asia/Tokyo) / 国際工科専門職大学 大阪キャンパス, 大阪市, 大阪府 / 現地開催
+- [Antigravity Deep Dive](https://cloudonair.withgoogle.com/events/26q4-antigravity-deep-dive) 🆕
+  - 2026/10/31 9:00 (Asia/Tokyo) / 東京（詳細は公式ページ参照） / ハイブリッド
+  - 接点期待度: 中 — Google主催の公式イベント / 会話しやすい双方向形式
+  - 主催: Google Cloud
+- [【Tokyo】GDGoC IPUT Tokyo ロゴデザインコンペティション](https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-tokyo-gdgoc-iput-tokyo-rogodezainkonpeteishiyon/) 🆕
+  - 2026/11/05 18:30 (Asia/Tokyo) / 東京国際工科専門職大学 総合校舎コクーンタワー, 新宿区, 東京都 / 現地開催
+  - 接点期待度: 中 — 交流・質問機会が明記 / 会話しやすい双方向形式 / GDGコミュニティ主催
+  - 主催: GDG on Campus International Professional University of Technology - Tokyo, Japan
+- [【OSAKA】AIワークショップ](https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-osaka-aiwakushiyotsupu-4/) 🆕
+  - 2026/11/14 13:00 (Asia/Tokyo) / 国際工科専門職大学 大阪キャンパス, 大阪市, 大阪府 / 現地開催
+  - 接点期待度: 中 — 交流・質問機会が明記 / 会話しやすい双方向形式 / GDGコミュニティ主催
+  - 主催: GDG on Campus International Professional University of Technology - Tokyo, Japan
+- [Google Developer Group DevFest Tokyo 2026](https://df26.gdgs.jp/tokyo/) 🆕
+  - 2026/11/29 12:00 (Asia/Tokyo) / JPタワー ホール＆カンファレンス, 千代田区, 東京都 / オンライン
+  - 接点期待度: 中 — 交流・質問機会が明記 / 会話しやすい双方向形式 / GDGコミュニティ主催
+  - 主催: GDG Tokyo / [公式詳細](https://gdg.community.dev/events/details/google-gdg-tokyo-presents-google-developer-group-devfest-tokyo-2026/)
+- [【OSAKA】AIワークショップ](https://gdg.community.dev/events/details/google-gdg-on-campus-international-professional-university-of-technology-tokyo-japan-presents-osaka-aiwakushiyotsupu-5/) 🆕
+  - 2026/12/05 13:00 (Asia/Tokyo) / 国際工科専門職大学 大阪キャンパス, 大阪市, 大阪府 / 現地開催
   - 接点期待度: 中 — 交流・質問機会が明記 / 会話しやすい双方向形式 / GDGコミュニティ主催
   - 主催: GDG on Campus International Professional University of Technology - Tokyo, Japan
 
@@ -39,9 +60,9 @@
 
 ## 取得メモ
 
-- Google: ChromiumでJavaScript描画後のDOMを19ページ確認（求人リンク109件、SWE 3件）
-- Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得2件、SWE 1件）
-- GDGイベント: 2チャプターを確認（開催予定2件、対象期間2件）
-- Google Cloudイベント: 日本フィルタで公式一覧12件を確認（日本の現地・ハイブリッド対象0件）
+- Google: ChromiumでJavaScript描画後のDOMを19ページ確認（求人リンク102件、SWE 4件）
+- Amazon: Playwrightのブラウザーコンテキストから公式検索APIを3回確認（取得3件、SWE 1件）
+- GDGイベント: 2チャプターを確認（開催予定4件、対象期間4件）
+- Google Cloudイベント: 日本フィルタで公式一覧12件を確認（日本の現地・ハイブリッド対象1件）
 
-_自動確認: 2026-09-24T22:07:32.170Z_
+_自動確認: 2026-10-23T00:21:35.113Z_
