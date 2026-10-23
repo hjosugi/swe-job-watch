@@ -1,45 +1,55 @@
 {
-  "checkedAt": "2026-09-24T22:07:32.170Z",
+  "checkedAt": "2026-10-23T00:21:35.113Z",
   "jobs": [
     {
-      "key": "amazon:10495479",
+      "key": "amazon:10582330",
       "company": "amazon",
       "companyName": "Amazon Japan G.K.",
-      "title": "Software Development Engineers - Pricing & Promotions, Amazon Japan",
-      "url": "https://www.amazon.jobs/en/jobs/10495479/software-development-engineers-pricing-promotions-amazon-japan",
+      "title": "【Class of 2027／Full-Time】Software Development Engineer, JP Seller Tech team",
+      "url": "https://www.amazon.jobs/en/jobs/10582330/class-of-2027-full-time-software-development-engineer-jp-seller-tech-team",
       "location": "Tokyo, Japan",
-      "postedDate": "August 7, 2026",
-      "levelEstimate": "レベル要確認"
+      "postedDate": "October 19, 2026",
+      "levelEstimate": "Amazon L5候補 / Google L4前後 目安"
     },
     {
-      "key": "google:117890978424988358",
-      "company": "google",
-      "companyName": "Google",
-      "title": "Forward Deployed Engineer, Gen AI, Google Cloud (English, Japanese)",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/117890978424988358-forward-deployed-engineer-gen-ai-google-cloud-english-japanese",
-      "location": "Tokyo, Japan",
-      "postedDate": "",
-      "levelEstimate": "レベル要確認"
-    },
-    {
-      "key": "google:81349030524658374",
+      "key": "google:116466339920388806",
       "company": "google",
       "companyName": "Google",
       "title": "Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/81349030524658374-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/116466339920388806-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
       "location": "Tokyo, Japan",
       "postedDate": "",
       "levelEstimate": "レベル要確認"
     },
     {
-      "key": "google:96898409864012486",
+      "key": "google:101631900837126854",
       "company": "google",
       "companyName": "Google",
-      "title": "Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
-      "url": "https://www.google.com/about/careers/applications/jobs/results/96898409864012486-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "title": "Geo Auto Forward Deployed Engineer (Japanese, English)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/101631900837126854-geo-auto-forward-deployed-engineer-japanese-english",
       "location": "Tokyo, Japan",
       "postedDate": "",
       "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:140967582155842246",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Partner Forward Deployed Engineer, Generative AI, Google Cloud (Japanese, English)",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/140967582155842246-partner-forward-deployed-engineer-generative-ai-google-cloud-japanese-english",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "レベル要確認"
+    },
+    {
+      "key": "google:142102724832305862",
+      "company": "google",
+      "companyName": "Google",
+      "title": "Software Engineer III, Search",
+      "url": "https://www.google.com/about/careers/applications/jobs/results/142102724832305862-software-engineer-iii-search",
+      "location": "Tokyo, Japan",
+      "postedDate": "",
+      "levelEstimate": "Google L4 目安"
     }
   ]
 }
